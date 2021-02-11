@@ -24,6 +24,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
+import java.util.Optional;
 
 import javax.inject.Inject;
 
@@ -187,12 +188,15 @@ public class SuggestionsAdapter extends BaseAdapter implements Filterable, Sugge
 
         @Override
         public void run() {
+            if (app == null || app.getCacheDir() == null) {
+                return;
+            }
             File dir = new File(app.getCacheDir().toString());
             String[] fileList = dir.list(new NameFilter());
             long earliestTimeAllowed = System.currentTimeMillis() - INTERVAL_DAY;
             for (String fileName : fileList) {
                 File file = new File(dir.getPath() + fileName);
-                if (earliestTimeAllowed > file.lastModified()) {
+                if (file.exists() && earliestTimeAllowed > file.lastModified()) {
                     file.delete();
                 }
             }
