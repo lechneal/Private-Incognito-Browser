@@ -33,7 +33,7 @@
             android:id="@+id/button_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:contentDescription="@null"
+            android:contentDescription="@string/cd_search_back"
             android:src="@drawable/ic_action_collapse"
             style="?android:attr/buttonBarButtonStyle" />
 
@@ -47,7 +47,7 @@
             android:id="@+id/button_next"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:contentDescription="@null"
+            android:contentDescription="@string/cd_search_next"
             android:src="@drawable/ic_action_expand"
             style="?android:attr/buttonBarButtonStyle" />
 
@@ -61,7 +61,7 @@
             android:id="@+id/button_quit"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:contentDescription="@null"
+            android:contentDescription="@string/cd_search_quit"
             android:src="@drawable/ic_action_delete"
             style="?android:attr/buttonBarButtonStyle" />
     </LinearLayout>

@@ -180,5 +180,11 @@
     <string name="screenshots_description">allows screenshots and shows the preview in recent apps view</string>
     <string name="msg_screenshot_title">Attention</string>
     <string name="msg_screenshot_test">The app must be restarted before the change takes effect</string>
+    <string name="cd_open_drawer">open drawer</string>
+    <string name="cd_search_back">search previous</string>
+    <string name="cd_search_next">search next</string>
+    <string name="cd_search_quit">quit search</string>
+    <string name="cd_tabs_close">close tab</string>
+    <string name="cd_tabs_actions">tabs actions</string>
 
 </resources>

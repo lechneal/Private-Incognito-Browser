@@ -19,6 +19,7 @@
             android:layout_width="?attr/actionBarSize"
             android:layout_height="match_parent"
             android:background="?attr/actionBarItemBackground"
+            android:contentDescription="@string/cd_tabs_actions"
             android:gravity="center">
 
             <ImageView

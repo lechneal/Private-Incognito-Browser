@@ -40,6 +40,7 @@
         android:layout_gravity="center_vertical"
         android:layout_marginRight="4dp"
         android:background="?attr/actionBarItemBackground"
+        android:contentDescription="@string/cd_tabs_close"
         android:gravity="center">
 
         <ImageView

@@ -10,6 +10,7 @@
         android:layout_height="match_parent"
         android:background="?attr/actionBarItemBackground"
         android:clickable="true"
+        android:contentDescription="@string/cd_open_drawer"
         android:gravity="center" >
 
         <ImageView
