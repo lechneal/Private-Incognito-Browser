@@ -189,6 +189,7 @@ public class SuggestionsAdapter extends BaseAdapter implements Filterable, Sugge
         @Override
         public void run() {
             if (app == null || app.getCacheDir() == null) {
+                Log.w(TAG, "app or cache dir is null");
                 return;
             }
             File dir = new File(app.getCacheDir().toString());

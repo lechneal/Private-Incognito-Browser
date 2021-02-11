@@ -24,6 +24,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.LayoutManager;
 import androidx.recyclerview.widget.SimpleItemAnimator;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -241,7 +243,11 @@ public class TabsFragment extends Fragment implements View.OnClickListener, View
             mRecyclerView.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    mRecyclerView.smoothScrollToPosition(mTabsAdapter.getItemCount() - 1);
+                    try {
+                        mRecyclerView.smoothScrollToPosition(mTabsAdapter.getItemCount() - 1);
+                    } catch (Exception e) {
+                        Log.e(TAG, "Failed to smooth scroll", e);
+                    }
                 }
             }, 500);
         }

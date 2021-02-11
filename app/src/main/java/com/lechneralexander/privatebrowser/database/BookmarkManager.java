@@ -369,6 +369,11 @@ public class BookmarkManager {
      */
     @NonNull
     public synchronized List<HistoryItem> getAllBookmarks(boolean sort) {
+        if (mBookmarksMap == null) {
+            Log.w(TAG, "mBookmarksMap is null");
+            return null;
+        }
+
         final List<HistoryItem> bookmarks = new ArrayList<>(mBookmarksMap.values());
         if (sort) {
             Collections.sort(bookmarks, new SortIgnoreCase());
