@@ -13,6 +13,7 @@ import com.lechneralexander.privatebrowser.download.DownloadHandler;
 
 @Singleton
 public class PreferenceManager {
+    public static final int DEFAULT_SEARCH_ENGINE = 7;
 
     public boolean getBlockThirdPartyCookiesEnabled() {
         return true;
@@ -195,7 +196,7 @@ public class PreferenceManager {
     }
 
     public int getSearchChoice() {
-        return mPrefs.getInt(Name.SEARCH, 1);
+        return mPrefs.getInt(Name.SEARCH, DEFAULT_SEARCH_ENGINE);
     }
 
     @NonNull
