@@ -1060,7 +1060,6 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
     }
 
     void performExitCleanUp() {
-        final LightningView currentTab = mTabsManager.getCurrentTab();
         if (mPreferences.getClearCacheExit()) {
             WebUtils.clearCache(BrowserActivity.this);
             Utils.trimCache(BrowserActivity.this);
