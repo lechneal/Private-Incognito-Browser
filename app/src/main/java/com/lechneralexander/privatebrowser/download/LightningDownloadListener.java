@@ -7,6 +7,12 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.DialogInterface;
 import androidx.appcompat.app.AlertDialog;
+import androidx.core.content.ContextCompat;
+
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.provider.Settings;
 import android.util.Log;
 import android.webkit.DownloadListener;
 import android.webkit.URLUtil;
@@ -20,6 +26,9 @@ import com.anthonycr.grant.PermissionsManager;
 import com.anthonycr.grant.PermissionsResultAction;
 
 import javax.inject.Inject;
+
+import static androidx.core.app.ActivityCompat.requestPermissions;
+import static androidx.core.content.ContextCompat.startActivity;
 
 public class LightningDownloadListener implements DownloadListener {
 
@@ -68,7 +77,35 @@ public class LightningDownloadListener implements DownloadListener {
 
                     @Override
                     public void onDenied(String permission) {
-                        //TODO show message
+                        AlertDialog.Builder builder = new AlertDialog.Builder(mActivity); // dialog
+
+                        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                switch (which) {
+                                    case DialogInterface.BUTTON_POSITIVE:
+                                        Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                                                Uri.fromParts("package", mActivity.getApplicationContext().getPackageName(), null));
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                        mActivity.getApplicationContext().startActivity(intent);
+                                        break;
+
+                                    case DialogInterface.BUTTON_NEGATIVE:
+                                        break;
+                                }
+                            }
+                        };
+
+                        builder.setTitle(mActivity.getResources().getString(R.string.dialog_download_permission_denied_header))
+                                .setMessage(mActivity.getResources().getString(R.string.dialog_download_permission_denied_text))
+                                .setPositiveButton(
+                                        mActivity.getResources().getString(R.string.action_change_permission),
+                                        dialogClickListener)
+                                .setNegativeButton(
+                                        mActivity.getResources().getString(R.string.action_cancel),
+                                        dialogClickListener
+                                )
+                                .show();
                     }
                 });
     }

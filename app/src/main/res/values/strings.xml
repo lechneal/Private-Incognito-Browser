@@ -186,5 +186,8 @@
     <string name="cd_search_quit">quit search</string>
     <string name="cd_tabs_close">close tab</string>
     <string name="cd_tabs_actions">tabs actions</string>
+    <string name="dialog_download_permission_denied_header">Permission denied</string>
+    <string name="dialog_download_permission_denied_text">Please allow access to Files and Media in the system settings if you want to download files.</string>
+    <string name="action_change_permission">go to permissions</string>
 
 </resources>
