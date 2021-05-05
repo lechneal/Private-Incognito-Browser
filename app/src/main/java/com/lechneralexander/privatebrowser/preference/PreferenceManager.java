@@ -13,7 +13,7 @@ import com.lechneralexander.privatebrowser.download.DownloadHandler;
 
 @Singleton
 public class PreferenceManager {
-    public static final int DEFAULT_SEARCH_ENGINE = 7;
+    public static final int DEFAULT_SEARCH_ENGINE = 1;
 
     public boolean getBlockThirdPartyCookiesEnabled() {
         return true;
@@ -54,6 +54,7 @@ public class PreferenceManager {
         public static final String SCREENSHOTS = "secureFlag";
         public static final String DO_NOT_TRACK = "doNotTrack";
         public static final String IDENTIFYING_HEADERS = "removeIdentifyingHeaders";
+        public static final String OPEN_PDF_IN_GOOGLE_DOCS = "openPdfInGoogleDocs";
         public static final String FINISH_ON_PAUSE = "closeOnPause";
 
         public static final String USE_PROXY = "useProxy";
@@ -94,6 +95,10 @@ public class PreferenceManager {
 
     public boolean getCheckedForI2P() {
         return mPrefs.getBoolean(Name.INITIAL_CHECK_FOR_I2P, false);
+    }
+
+    public boolean getOpenPdfInGoogleDocs() {
+        return mPrefs.getBoolean(Name.OPEN_PDF_IN_GOOGLE_DOCS, false);
     }
 
     public boolean getClearCacheExit() {
@@ -272,6 +277,10 @@ public class PreferenceManager {
 
     public void setRemoveIdentifyingHeadersEnabled(boolean enabled) {
         putBoolean(Name.IDENTIFYING_HEADERS, enabled);
+    }
+
+    public void setOpenPdfInGoogleDocs(boolean enabled) {
+        putBoolean(Name.OPEN_PDF_IN_GOOGLE_DOCS, enabled);
     }
 
     public void setCookiesEnabled(boolean enabled) {

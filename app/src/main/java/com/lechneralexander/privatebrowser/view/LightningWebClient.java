@@ -37,6 +37,7 @@ import com.lechneralexander.privatebrowser.R;
 import com.lechneralexander.privatebrowser.app.BrowserApp;
 import com.lechneralexander.privatebrowser.constant.Constants;
 import com.lechneralexander.privatebrowser.controller.UIController;
+import com.lechneralexander.privatebrowser.preference.PreferenceManager;
 import com.lechneralexander.privatebrowser.utils.AdBlock;
 import com.lechneralexander.privatebrowser.utils.IntentUtils;
 import com.lechneralexander.privatebrowser.utils.Preconditions;
@@ -50,6 +51,7 @@ public class LightningWebClient extends WebViewClient {
     @NonNull private final IntentUtils mIntentUtils;
 
     @Inject AdBlock mAdBlock;
+    @Inject PreferenceManager mPreferences;
 
     LightningWebClient(@NonNull Activity activity, @NonNull LightningView lightningView) {
         BrowserApp.getAppComponent().inject(this);
@@ -314,8 +316,7 @@ public class LightningWebClient extends WebViewClient {
 
         Map<String, String> headers = mLightningView.getRequestHeaders();
 
-
-        if (isGoogleDoc(url)){
+        if (isGoogleDoc(url) && mPreferences.getOpenPdfInGoogleDocs()) {
             view.loadUrl("http://docs.google.com/viewer?embedded=true&url=" + url, headers);
             return true;
         }

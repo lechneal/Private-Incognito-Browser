@@ -30,6 +30,7 @@ public class PrivacySettingsFragment extends LightningPreferenceFragment impleme
     private static final String SETTINGS_CLEARWEBSTORAGE = "clear_webstorage";
     private static final String SETTINGS_COOKIESENABLED = "cookies_enabled";
     private static final String SETTINGS_IDENTIFYINGHEADERS = "remove_identifying_headers";
+    private static final String SETTINGS_OPEN_PDF_IN_GOOGLE_DOCS = "open_pdf_with_google_docs";
     private static final String SETTINGS_FINISH_ON_PAUSE = "finish_on_pause";
 
     private Activity mActivity;
@@ -56,6 +57,7 @@ public class PrivacySettingsFragment extends LightningPreferenceFragment impleme
         CheckBoxPreference cbFinishOnPause = (CheckBoxPreference) findPreference(SETTINGS_FINISH_ON_PAUSE);
         CheckBoxPreference cbCookiesEnabled = (CheckBoxPreference) findPreference(SETTINGS_COOKIESENABLED);
         CheckBoxPreference cbIdentifyingHeaders = (CheckBoxPreference) findPreference(SETTINGS_IDENTIFYINGHEADERS);
+        CheckBoxPreference cbGoogleDocs = (CheckBoxPreference) findPreference(SETTINGS_OPEN_PDF_IN_GOOGLE_DOCS);
 
         clearprivatedata.setOnPreferenceClickListener(this);
 
@@ -64,12 +66,14 @@ public class PrivacySettingsFragment extends LightningPreferenceFragment impleme
         cbFinishOnPause.setOnPreferenceChangeListener(this);
         cbCookiesEnabled.setOnPreferenceChangeListener(this);
         cbIdentifyingHeaders.setOnPreferenceChangeListener(this);
+        cbGoogleDocs.setOnPreferenceChangeListener(this);
 
         cbcacheexit.setChecked(mPreferenceManager.getClearCacheExit());
         cbprivatedataexit.setChecked(mPreferenceManager.getClearPrivateDataExit());
         cbFinishOnPause.setChecked(mPreferenceManager.getFinishOnPause());
         cbCookiesEnabled.setChecked(mPreferenceManager.getCookiesEnabled());
         cbIdentifyingHeaders.setChecked(mPreferenceManager.getRemoveIdentifyingHeadersEnabled() && Utils.doesSupportHeaders());
+        cbGoogleDocs.setChecked(mPreferenceManager.getOpenPdfInGoogleDocs());
 
         cbIdentifyingHeaders.setEnabled(Utils.doesSupportHeaders());
 
@@ -200,6 +204,9 @@ public class PrivacySettingsFragment extends LightningPreferenceFragment impleme
                 return true;
             case SETTINGS_IDENTIFYINGHEADERS:
                 mPreferenceManager.setRemoveIdentifyingHeadersEnabled((Boolean) newValue);
+                return true;
+            case SETTINGS_OPEN_PDF_IN_GOOGLE_DOCS:
+                mPreferenceManager.setOpenPdfInGoogleDocs((Boolean) newValue);
                 return true;
             case SETTINGS_FINISH_ON_PAUSE:
                 mPreferenceManager.setFinishOnPause((Boolean) newValue);

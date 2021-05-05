@@ -189,5 +189,6 @@
     <string name="dialog_download_permission_denied_header">Permission denied</string>
     <string name="dialog_download_permission_denied_text">Please allow access to Files and Media in the system settings if you want to download files.</string>
     <string name="action_change_permission">go to permissions</string>
+    <string name="open_pdf_with_google_docs">Open documents with google docs</string>
 
 </resources>
