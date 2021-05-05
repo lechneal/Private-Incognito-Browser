@@ -191,7 +191,7 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
 
     @Inject LightningDialogBuilder mBookmarksDialogBuilder;
 
-    private TabsManager mTabsManager;
+    protected TabsManager mTabsManager;
 
     // Image
     private Bitmap mWebpageBitmap;
@@ -634,6 +634,12 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
             });
         }
 
+        initializeSearchEnginePreferences();
+
+        updateCookiePreference().subscribeOn(Schedulers.worker()).subscribe();
+    }
+
+    protected void initializeSearchEnginePreferences() {
         switch (mPreferences.getSearchChoice()) {
             case 0:
                 mSearchText = mPreferences.getSearchUrl();
@@ -673,8 +679,6 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
                 mSearchText = Constants.YANDEX_SEARCH;
                 break;
         }
-
-        updateCookiePreference().subscribeOn(Schedulers.worker()).subscribe();
     }
 
     @Override

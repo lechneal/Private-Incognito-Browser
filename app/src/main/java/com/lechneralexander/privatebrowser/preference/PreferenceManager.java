@@ -73,7 +73,11 @@ public class PreferenceManager {
 
     @Inject
     PreferenceManager(@NonNull final Context context) {
-        mPrefs = context.getSharedPreferences(PREFERENCES, 0);
+        mPrefs = getSharedPreferences(context);
+    }
+
+    public static SharedPreferences getSharedPreferences(@NonNull final Context context) {
+        return context.getSharedPreferences(PREFERENCES, 0);
     }
 
     public boolean getAdBlockEnabled() {
@@ -201,6 +205,10 @@ public class PreferenceManager {
     }
 
     public int getSearchChoice() {
+        return getSearchChoice(this.mPrefs);
+    }
+
+    public static int getSearchChoice(SharedPreferences mPrefs) {
         return mPrefs.getInt(Name.SEARCH, DEFAULT_SEARCH_ENGINE);
     }
 
@@ -381,7 +389,11 @@ public class PreferenceManager {
     }
 
     public void setSearchChoice(int choice) {
-        putInt(Name.SEARCH, choice);
+        setSearchChoice(choice, mPrefs);
+    }
+
+    public static void setSearchChoice(int choice, SharedPreferences mPrefs) {
+        mPrefs.edit().putInt(Name.SEARCH, choice).apply();
     }
 
     public void setSearchUrl(@NonNull String url) {
