@@ -1,16 +1,15 @@
 apply plugin: 'com.android.application'
-//apply plugin: 'com.getkeepsafe.dexcount'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     buildToolsVersion '30.0.3'
 
     defaultConfig {
         applicationId "com.lechneralexander.privatebrowser"
         minSdkVersion 14
-        targetSdkVersion 30
-        versionCode 50
-        versionName "2.7"
+        targetSdkVersion 31
+        versionCode 51
+        versionName "2.7.1"
     }
 
     buildTypes {
@@ -30,20 +29,15 @@ android {
     lintOptions {
         abortOnError true
     }
-
     packagingOptions {
-        exclude '.readme'
+        resources {
+            excludes += ['.readme']
+        }
     }
+
+    namespace 'com.lechneralexander.privatebrowser'
 }
 
-
-//dexcount {
-//    includeClasses = false
-//    includeFieldCount = false
-//    printAsTree = true
-//    orderByMethodCount = true
-//    verbose = false
-//}
 
 dependencies {
     // support libraries
