@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -209,6 +210,11 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
             LayoutParams.MATCH_PARENT);
     private static final FrameLayout.LayoutParams COVER_SCREEN_PARAMS = new FrameLayout.LayoutParams(
             LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+
+    // Preferences
+    public static final String PREFS_SHARED_FILE = "SharedPrefsFile";
+    public static final String PREF_SEARCH_ENGINE_DIALOG_SHOWN = "SharedPrefsFile";
+    public static final String PREF_CLEAN_ALL_DATA = "CleanAllData";
 
     protected abstract boolean isIncognito();
 
@@ -762,6 +768,7 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
             case R.id.action_settings:
                 startActivity(new Intent(this, SettingsActivity.class));
                 return true;
+                //TODO export & import bookmarks
             case R.id.action_add_bookmark:
                 if (currentUrl != null && !UrlUtils.isSpecialUrl(currentUrl)) {
                     addBookmark(currentView.getTitle(), currentUrl);
@@ -1138,6 +1145,10 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
         for (int n = 0; n < size; n++) {
             mTabsView.tabRemoved(0);
         }
+
+        SharedPreferences.Editor editor = getSharedPreferences(PREFS_SHARED_FILE, 0).edit();
+        editor.putBoolean(PREF_CLEAN_ALL_DATA, false);
+        editor.commit();
 
         finish();
     }

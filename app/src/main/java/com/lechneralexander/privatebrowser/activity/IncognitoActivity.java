@@ -47,8 +47,6 @@ public class IncognitoActivity extends BrowserActivity {
         } else {
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
         }
-        // Delete all private data as it cannot be guaranteed this was called (e.g. closing app in recent apps)
-        this.performExitCleanUp();
     }
 
     @Override

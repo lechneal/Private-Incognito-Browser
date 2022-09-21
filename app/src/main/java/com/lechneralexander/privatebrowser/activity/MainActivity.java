@@ -14,8 +14,6 @@ import com.lechneralexander.privatebrowser.preference.PreferenceManager;
 
 @SuppressWarnings("deprecation")
 public class MainActivity extends IncognitoActivity {
-    public static final String PREFS_SHARED_FILE = "SharedPrefsFile";
-    public static final String PREF_SEARCH_ENGINE_DIALOG_SHOWN = "SharedPrefsFile";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +21,22 @@ public class MainActivity extends IncognitoActivity {
 
         try {
             SharedPreferences settings = getSharedPreferences(PREFS_SHARED_FILE, 0);
+            SharedPreferences.Editor editor = settings.edit();
+
             boolean dialogShown = settings.getBoolean(PREF_SEARCH_ENGINE_DIALOG_SHOWN, false);
             if (!dialogShown) {
-                SharedPreferences.Editor editor = settings.edit();
                 editor.putBoolean(PREF_SEARCH_ENGINE_DIALOG_SHOWN, true);
-                editor.commit();
                 showSelectSearchEngineDialog(settings);
             }
+
+            boolean cleanAllData = settings.getBoolean(PREF_CLEAN_ALL_DATA, false);
+            if (cleanAllData) {
+                // Delete all private data as it cannot be guaranteed this was called (e.g. closing app in recent apps)
+                super.performExitCleanUp();
+            }
+
+            editor.putBoolean(PREF_CLEAN_ALL_DATA, true);
+            editor.commit();
         } catch (Exception e) {
             Log.e(Constants.TAG, "error showing search engine dialog on startup", e);
         }
