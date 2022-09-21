@@ -162,7 +162,7 @@
     <string name="debug_title">Debug Settings</string>
     <string name="debug_leak_canary">LeakCanary</string>
     <string name="app_restart">Please restart the app for the change to take effect.</string>
-    <string name="app_name">Internet</string>
+    <string name="app_name">Internet Browser</string>
     <string name="lightning_name">Lightning-Browser</string>
     <string name="url_lightning">https://github.com/anthonycr/Lightning-Browser</string>
     <string name="action_open_lightning">Based on LightningBrowser by Anthony Restaino</string>
