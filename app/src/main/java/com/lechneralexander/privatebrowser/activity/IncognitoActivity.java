@@ -1,10 +1,14 @@
 package com.lechneralexander.privatebrowser.activity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.view.menu.MenuBuilder;
+
+import android.util.Log;
 import android.view.Menu;
 import android.view.WindowManager;
 import android.webkit.CookieManager;
@@ -17,6 +21,8 @@ import com.lechneralexander.privatebrowser.react.Subscriber;
 
 @SuppressWarnings("deprecation")
 public class IncognitoActivity extends BrowserActivity {
+
+    private static final String TAG = IncognitoActivity.class.getSimpleName();
 
     @Override
     public Observable<Void> updateCookiePreference() {
@@ -33,8 +39,15 @@ public class IncognitoActivity extends BrowserActivity {
         });
     }
 
+    @SuppressLint("RestrictedApi")
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        try {
+            if (menu instanceof MenuBuilder)
+                ((MenuBuilder) menu).setOptionalIconsVisible(true);
+        }catch (Exception e) {
+            Log.e(TAG, "Error", e);
+        }
         getMenuInflater().inflate(R.menu.main, menu);
         return super.onCreateOptionsMenu(menu);
     }

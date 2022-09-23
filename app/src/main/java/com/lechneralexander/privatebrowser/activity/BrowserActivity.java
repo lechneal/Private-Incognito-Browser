@@ -834,6 +834,7 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
             case R.id.action_add_bookmark:
                 if (currentUrl != null && !UrlUtils.isSpecialUrl(currentUrl)) {
                     addBookmark(currentView.getTitle(), currentUrl);
+                    Utils.showSnackbar(this, "⭐ " + currentUrl);
                 }
                 return true;
             case R.id.action_find:
@@ -1413,6 +1414,18 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
 
     @Override
     public void updateUrl(@Nullable String url, boolean shortUrl) {
+        boolean pageActionsEnabled = url != null && !UrlUtils.isSpecialUrl(url);
+
+        if (mShareMenuItem != null) {
+            mShareMenuItem.setEnabled(pageActionsEnabled);
+        }
+        if (mAddBookmarkItem != null) {
+            mAddBookmarkItem.setEnabled(pageActionsEnabled);
+        }
+        if (mFindInPageItem != null) {
+            mFindInPageItem.setEnabled(pageActionsEnabled);
+        }
+
         if (url == null || mSearch == null || mSearch.hasFocus()) {
             return;
         }
@@ -1562,6 +1575,7 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
             }
             mForwardMenuItem.getIcon().setColorFilter(colorFilter, PorterDuff.Mode.SRC_IN);
             mForwardMenuItem.setIcon(mForwardMenuItem.getIcon());
+            mForwardMenuItem.setEnabled(enabled);
         }
     }
 
@@ -1581,9 +1595,15 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
 
     private MenuItem mBackMenuItem;
     private MenuItem mForwardMenuItem;
+    private MenuItem mShareMenuItem;
+    private MenuItem mAddBookmarkItem;
+    private MenuItem mFindInPageItem;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        mShareMenuItem = menu.findItem(R.id.action_share);
+        mAddBookmarkItem = menu.findItem(R.id.action_add_bookmark);
+        mFindInPageItem = menu.findItem(R.id.action_find);
         mBackMenuItem = menu.findItem(R.id.action_back);
         mForwardMenuItem = menu.findItem(R.id.action_forward);
         if (mBackMenuItem != null && mBackMenuItem.getIcon() != null)
