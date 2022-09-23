@@ -66,6 +66,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/actionBarItemBackground"
+            android:tooltipText="@string/action_back"
             android:clickable="true">
 
             <ImageView
@@ -83,6 +84,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/actionBarItemBackground"
+            android:tooltipText="@string/home"
             android:clickable="true">
 
             <ImageView
@@ -90,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:contentDescription="@string/action_homepage"
+                android:contentDescription="@string/home"
                 android:src="@drawable/ic_action_home"/>
         </FrameLayout>
 
@@ -100,6 +102,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/actionBarItemBackground"
+            android:tooltipText="@string/action_forward"
             android:clickable="true">
 
             <ImageView
@@ -117,6 +120,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/actionBarItemBackground"
+            android:tooltipText="@string/action_new_tab"
             android:clickable="true">
 
             <ImageView

@@ -122,6 +122,8 @@
     <string name="name_normal">Normal</string>
     <string name="title_file_chooser">File Chooser</string>
     <string name="bookmark_export_path">Bookmarks exported to</string>
+    <string name="bookmark_export_action">Export Bookmarks</string>
+    <string name="bookmark_import_action">Import Bookmarks</string>
     <string name="import_bookmark_error">Could not import bookmarks from file</string>
     <string name="settings_general">General Settings</string>
     <string name="settings_display">Display Settings</string>
@@ -190,5 +192,8 @@
     <string name="dialog_download_permission_denied_text">Please allow access to Files and Media in the system settings if you want to download files.</string>
     <string name="action_change_permission">go to permissions</string>
     <string name="open_pdf_with_google_docs">Open documents with google docs</string>
+    <string name="import_bookmarks_title">Importing Bookmarks</string>
+    <string name="import_bookmarks_message">The imported bookmarks will be added to your existing bookmarks.</string>
+    <string name="share">Share</string>
 
 </resources>

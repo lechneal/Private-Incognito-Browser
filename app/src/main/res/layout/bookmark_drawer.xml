@@ -52,14 +52,14 @@
         android:dividerHeight="0dp"
         android:listSelector="?attr/listBackground"/>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/dividerColor"
         android:baselineAligned="false"
         android:orientation="horizontal"
-        android:weightSum="1">
-
+        android:weightSum="3">
 
         <FrameLayout
             android:id="@+id/action_add_bookmark"
@@ -67,6 +67,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/actionBarItemBackground"
+            android:tooltipText="@string/action_add_bookmark"
             android:clickable="true">
 
             <ImageView
@@ -74,12 +75,56 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:contentDescription="@string/action_new_tab"
+                android:contentDescription="@string/action_add_bookmark"
                 android:paddingBottom="4dp"
                 android:paddingLeft="4dp"
                 android:paddingRight="4dp"
                 android:paddingTop="4dp"
                 android:src="@drawable/ic_action_star"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/action_export_bookmarks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/actionBarItemBackground"
+            android:tooltipText="@string/bookmark_export_action"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/icon_export"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/bookmark_export_action"
+                android:paddingBottom="4dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"
+                android:src="@drawable/ic_action_export"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/action_import_bookmarks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/actionBarItemBackground"
+            android:tooltipText="@string/bookmark_import_action"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/icon_import"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/bookmark_import_action"
+                android:paddingBottom="4dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"
+                android:src="@drawable/ic_action_import"/>
         </FrameLayout>
 
     </LinearLayout>

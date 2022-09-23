@@ -1,10 +1,19 @@
 package com.lechneralexander.privatebrowser.fragment;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.PorterDuff;
+import android.net.Uri;
 import android.os.Bundle;
+
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +38,7 @@ import android.widget.TextView;
 import com.squareup.otto.Bus;
 import com.squareup.otto.Subscribe;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -89,6 +99,10 @@ public class BookmarksFragment extends Fragment implements View.OnClickListener,
     private int mIconColor, mScrollIndex;
 
     private boolean mIsIncognito;
+
+    private ActivityResultLauncher<String> mGetContent = registerForActivityResult(
+            new ActivityResultContracts.GetContent(),
+            uri -> mBookmarkManager.importBookmarksFromFile(uri, getActivity()));
 
     private Observable<BookmarkViewAdapter> initBookmarkManager() {
         return Observable.create(new Action<BookmarkViewAdapter>() {
@@ -173,6 +187,8 @@ public class BookmarksFragment extends Fragment implements View.OnClickListener,
             }
         });
         setupNavigationButton(view, R.id.action_add_bookmark, R.id.icon_star);
+        setupNavigationButton(view, R.id.action_export_bookmarks, R.id.icon_export);
+        setupNavigationButton(view, R.id.action_import_bookmarks, R.id.icon_import);
 //        setupNavigationButton(view, R.id.action_toggle_desktop, R.id.icon_desktop);
 
         initBookmarkManager().subscribeOn(Schedulers.io())
@@ -329,6 +345,17 @@ public class BookmarksFragment extends Fragment implements View.OnClickListener,
     @Override
     public void onClick(@NonNull View v) {
         switch (v.getId()) {
+            case R.id.action_export_bookmarks:
+                mBookmarkManager.exportBookmarks(getActivity());
+                break;
+            case R.id.action_import_bookmarks:
+                new AlertDialog.Builder(getActivity())
+                        .setTitle(R.string.import_bookmarks_title)
+                        .setMessage(R.string.import_bookmarks_message)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, (dialog, whichButton) -> mGetContent.launch("text/plain"))
+                        .setNegativeButton(android.R.string.cancel, null).show();
+                break;
             case R.id.action_add_bookmark:
                 mEventBus.post(new BookmarkEvents.ToggleBookmarkForCurrentPage());
                 break;

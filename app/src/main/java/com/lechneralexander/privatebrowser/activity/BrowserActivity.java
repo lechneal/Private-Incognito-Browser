@@ -26,21 +26,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.StrictMode;
 import android.provider.MediaStore;
-import androidx.annotation.ColorInt;
-import androidx.annotation.IdRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.core.content.ContextCompat;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.drawerlayout.widget.DrawerLayout.DrawerListener;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
-import androidx.palette.graphics.Palette;
-import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -81,15 +66,27 @@ import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.widget.VideoView;
 
+import androidx.annotation.ColorInt;
+import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.drawerlayout.widget.DrawerLayout.DrawerListener;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.palette.graphics.Palette;
+
 import com.anthonycr.grant.PermissionsManager;
-import com.squareup.otto.Bus;
-import com.squareup.otto.Subscribe;
-
-import java.io.File;
-import java.io.IOException;
-
-import javax.inject.Inject;
-
+import com.google.android.gms.tasks.Task;
+import com.google.android.play.core.review.ReviewInfo;
+import com.google.android.play.core.review.ReviewManager;
+import com.google.android.play.core.review.ReviewManagerFactory;
 import com.lechneralexander.privatebrowser.BuildConfig;
 import com.lechneralexander.privatebrowser.R;
 import com.lechneralexander.privatebrowser.app.BrowserApp;
@@ -108,10 +105,10 @@ import com.lechneralexander.privatebrowser.database.HistoryItem;
 import com.lechneralexander.privatebrowser.dialog.LightningDialogBuilder;
 import com.lechneralexander.privatebrowser.fragment.BookmarksFragment;
 import com.lechneralexander.privatebrowser.fragment.TabsFragment;
-import com.lechneralexander.privatebrowser.search.SuggestionsAdapter;
 import com.lechneralexander.privatebrowser.react.Observable;
 import com.lechneralexander.privatebrowser.react.Schedulers;
 import com.lechneralexander.privatebrowser.receiver.NetworkReceiver;
+import com.lechneralexander.privatebrowser.search.SuggestionsAdapter;
 import com.lechneralexander.privatebrowser.utils.DrawableUtils;
 import com.lechneralexander.privatebrowser.utils.KeyboardHelper;
 import com.lechneralexander.privatebrowser.utils.ThemeUtils;
@@ -121,6 +118,16 @@ import com.lechneralexander.privatebrowser.utils.WebUtils;
 import com.lechneralexander.privatebrowser.view.AnimatedProgressBar;
 import com.lechneralexander.privatebrowser.view.LightningView;
 import com.lechneralexander.privatebrowser.view.SearchView;
+import com.squareup.otto.Bus;
+import com.squareup.otto.Subscribe;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Calendar;
+import java.util.Date;
+
+import javax.inject.Inject;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -215,6 +222,7 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
     public static final String PREFS_SHARED_FILE = "SharedPrefsFile";
     public static final String PREF_SEARCH_ENGINE_DIALOG_SHOWN = "SharedPrefsFile";
     public static final String PREF_CLEAN_ALL_DATA = "CleanAllData";
+    public static final String PREF_LAST_REVIEW_SHOWN_DATE = "LastReviewShownDate";
 
     protected abstract boolean isIncognito();
 
@@ -262,6 +270,61 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
                 }
             }
         });
+
+//        showReview();
+    }
+
+    private void showReview() {
+        try {
+            SharedPreferences settings = getSharedPreferences(PREFS_SHARED_FILE, 0);
+            Long lastReviewShownDate = settings.getLong(PREF_LAST_REVIEW_SHOWN_DATE, -1);
+
+            Date installationDatetime;
+            if (lastReviewShownDate != -1) {
+                installationDatetime = new Date(lastReviewShownDate);
+            } else {
+                long unixInstallationTime = getApplicationContext()
+                        .getPackageManager()
+                        .getPackageInfo(this.getPackageName(), 0)
+                        .firstInstallTime;
+
+                installationDatetime = new Date(unixInstallationTime);
+            }
+
+            Calendar reviewThresholdDate = Calendar.getInstance();
+            reviewThresholdDate.setTime(installationDatetime);
+            reviewThresholdDate.add(Calendar.MONTH, 3);
+
+            Date now = new Date();
+            if (now.before(reviewThresholdDate.getTime())) {
+                return;
+            }
+
+            SharedPreferences.Editor editor = getSharedPreferences(PREFS_SHARED_FILE, 0).edit();
+            editor.putLong(PREF_LAST_REVIEW_SHOWN_DATE, new Date().getTime());
+            editor.commit();
+
+            final ReviewManager manager = ReviewManagerFactory.create(this);
+            Task<ReviewInfo> request = manager.requestReviewFlow();
+            request.addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    // We can get the ReviewInfo object
+                    ReviewInfo reviewInfo = task.getResult();
+                    Task<Void> flow = manager.launchReviewFlow(this, reviewInfo);
+                    flow.addOnCompleteListener(reviewTask -> {
+                        Log.i(TAG, "test");
+                        // The flow has finished. The API does not indicate whether the user
+                        // reviewed or not, or even whether the review dialog was shown. Thus, no
+                        // matter the result, we continue our app flow.
+                    });
+                } else {
+                    // There was some problem, log or handle the error code.
+                    Log.e(TAG, task.getException().getMessage());
+                }
+            });
+        } catch (Exception e) {
+            Log.e(TAG, "Error", e);
+        }
     }
 
     private synchronized void initialize(Bundle savedInstanceState) {
@@ -745,15 +808,15 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
             case R.id.action_new_tab:
                 newTab(null, true);
                 return true;
-//            case R.id.action_share:
-//                if (currentUrl != null && !UrlUtils.isSpecialUrl(currentUrl)) {
-//                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
-//                    shareIntent.setType("text/plain");
-//                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, currentView.getTitle());
-//                    shareIntent.putExtra(Intent.EXTRA_TEXT, currentUrl);
-//                    startActivity(Intent.createChooser(shareIntent, getResources().getString(R.string.dialog_title_share)));
-//                }
-//                return true;
+            case R.id.action_share:
+                if (currentUrl != null && !UrlUtils.isSpecialUrl(currentUrl)) {
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setType("text/plain");
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, currentView.getTitle());
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, currentUrl);
+                    startActivity(Intent.createChooser(shareIntent, getResources().getString(R.string.share)));
+                }
+                return true;
             case R.id.action_bookmarks:
                 openBookmarks();
                 return true;
@@ -768,7 +831,6 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
             case R.id.action_settings:
                 startActivity(new Intent(this, SettingsActivity.class));
                 return true;
-                //TODO export & import bookmarks
             case R.id.action_add_bookmark:
                 if (currentUrl != null && !UrlUtils.isSpecialUrl(currentUrl)) {
                     addBookmark(currentView.getTitle(), currentUrl);

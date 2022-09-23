@@ -155,7 +155,6 @@ public class TabsFragment extends Fragment implements View.OnClickListener, View
         final View frameButton = root.findViewById(buttonId);
         final ImageView buttonImage = (ImageView) root.findViewById(imageId);
         frameButton.setOnClickListener(this);
-        frameButton.setOnLongClickListener(this);
         buttonImage.setColorFilter(mIconColor, PorterDuff.Mode.SRC_IN);
     }
 
@@ -228,6 +227,7 @@ public class TabsFragment extends Fragment implements View.OnClickListener, View
     public boolean onLongClick(@NonNull View v) {
         switch (v.getId()) {
             case R.id.action_new_tab:
+            case R.id.new_tab_button:
                 mBus.post(new TabEvents.NewTabLongPress());
                 break;
             default:

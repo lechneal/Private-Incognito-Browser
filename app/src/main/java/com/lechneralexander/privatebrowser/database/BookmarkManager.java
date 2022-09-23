@@ -2,6 +2,7 @@ package com.lechneralexander.privatebrowser.database;
 
 import android.app.Activity;
 import android.content.Context;
+import android.net.Uri;
 import android.os.Environment;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -507,17 +508,18 @@ public class BookmarkManager {
      * This method imports the bookmarks from a backup file that is located on
      * external storage
      *
-     * @param file the file to attempt to import bookmarks from
+     * @param uri the content uri to attempt to import bookmarks from
      */
-    public synchronized void importBookmarksFromFile(@Nullable File file, @NonNull Activity activity) {
-        if (file == null) {
+    public synchronized void importBookmarksFromFile(@Nullable Uri uri, @NonNull Activity activity) {
+        if (uri == null) {
             return;
         }
         List<HistoryItem> list = new ArrayList<>();
         BufferedReader bookmarksReader = null;
         try {
             //noinspection IOResourceOpenedButNotSafelyClosed
-            bookmarksReader = new BufferedReader(new FileReader(file));
+            InputStream inputStream = activity.getContentResolver().openInputStream(uri);
+            bookmarksReader = new BufferedReader(new InputStreamReader(inputStream));
             String line;
             int number = 0;
             while ((line = bookmarksReader.readLine()) != null) {

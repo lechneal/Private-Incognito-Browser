@@ -48,6 +48,9 @@
         android:id="@+id/action_add_bookmark"
         android:title="@string/action_add_bookmark"/>
     <item
+        android:id="@+id/action_share"
+        android:title="@string/share"/>
+    <item
         android:id="@+id/action_settings"
         android:title="@string/settings"/>
     <item
