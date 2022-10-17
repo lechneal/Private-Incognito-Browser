@@ -271,13 +271,13 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
             }
         });
 
-//        showReview();
+        showReview();
     }
 
     private void showReview() {
         try {
             SharedPreferences settings = getSharedPreferences(PREFS_SHARED_FILE, 0);
-            Long lastReviewShownDate = settings.getLong(PREF_LAST_REVIEW_SHOWN_DATE, -1);
+            long lastReviewShownDate = settings.getLong(PREF_LAST_REVIEW_SHOWN_DATE, -1);
 
             Date installationDatetime;
             if (lastReviewShownDate != -1) {
@@ -302,7 +302,7 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
 
             SharedPreferences.Editor editor = getSharedPreferences(PREFS_SHARED_FILE, 0).edit();
             editor.putLong(PREF_LAST_REVIEW_SHOWN_DATE, new Date().getTime());
-            editor.commit();
+            editor.apply();
 
             final ReviewManager manager = ReviewManagerFactory.create(this);
             Task<ReviewInfo> request = manager.requestReviewFlow();
@@ -312,7 +312,7 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
                     ReviewInfo reviewInfo = task.getResult();
                     Task<Void> flow = manager.launchReviewFlow(this, reviewInfo);
                     flow.addOnCompleteListener(reviewTask -> {
-                        Log.i(TAG, "test");
+                        Log.i(TAG, "flow complete");
                         // The flow has finished. The API does not indicate whether the user
                         // reviewed or not, or even whether the review dialog was shown. Thus, no
                         // matter the result, we continue our app flow.
@@ -1112,6 +1112,7 @@ public abstract class BrowserActivity extends ThemableBrowserActivity implements
 
     @Override
     public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
         if (level > TRIM_MEMORY_MODERATE && Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
             Log.d(TAG, "Low Memory, Free Memory");
             mTabsManager.freeMemory();
