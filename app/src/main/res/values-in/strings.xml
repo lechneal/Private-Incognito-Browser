@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_new_tab">Tab baru</string>
+    <string name="action_new_bg_tab">Buka di latar belakang</string>
+    <string name="action_history">Sejarah</string>
+    <string name="action_bookmarks">Bookmark</string>
+    <string name="action_add_bookmark">Tambah bookmark</string>
+    <string name="action_copy">Salin tautan</string>
+    <string name="action_forward">Maju</string>
+    <string name="settings">Pengaturan</string>
+    <string name="agent" translatable="false">User Agent</string>
+    <string name="home">Beranda</string>
+    <string name="fullscreen">Mode layar penuh</string>
+    <string name="java">Aktifkan JavaScript</string>
+    <string name="download">Unduh Lokasi</string>
+    <string name="settings_advanced">Pengaturan lanjutan</string>
+    <string name="apache" translatable="false">Apache License 2.0</string>
+    <string name="version">Versi Aplikasi</string>
+    <string name="cache">Hapus cache saat keluar</string>
+    <string name="reflow">Aktifkan reflow teks</string>
+    <string name="block">Blokir Gambar</string>
+    <string name="window">Izinkan situs untuk membuka jendela baru</string>
+    <string name="recommended">Direkomendasikan</string>
+    <string name="search">Mesin pencari</string>
+    <string name="search_hint">Mencari</string>
+    <string name="wideViewPort">Gunakan area pandang yang luas</string>
+    <string name="overViewMode">Muat halaman dalam mode ikhtisar</string>
+    <string name="fullScreenOption">Sembunyikan bilah status saat menjelajah</string>
+    <string name="dialog_image">Apa yang ingin Anda lakukan dengan gambar ini?</string>
+    <string name="action_download">Unduh</string>
+    <string name="action_open">Membuka</string>
+    <string name="dialog_link">Apa yang ingin Anda lakukan dengan tautan ini?</string>
+    <string name="dialog_history_long_press">Apa yang ingin Anda lakukan dengan item sejarah ini?</string>
+    <string name="dialog_bookmark">Apa yang ingin Anda lakukan dengan bookmark ini?</string>
+    <string name="action_delete">Menghapus</string>
+    <string name="action_blank">Halaman kosong</string>
+    <string name="agent_default">Bawaan</string>
+    <string name="agent_desktop">Desktop</string>
+    <string name="agent_mobile">Seluler</string>
+    <string name="agent_custom">Kebiasaan</string>
+    <string name="title_search_engine">Mesin pencari</string>
+    <string name="action_ok">Oke</string>
+    <string name="dialog_download">Apakah Anda ingin mengunduh file ini?</string>
+    <string name="action_cancel">Membatalkan</string>
+    <string name="title_warning">Peringatan</string>
+    <string name="title_download_location">Unduh Lokasi</string>
+    <string name="title_custom_homepage">Beranda Kustom</string>
+    <string name="action_webpage">Halaman web</string>
+    <string name="title_clear_cookies">Hapus Cookie</string>
+    <string name="dialog_cookies">Apakah Anda ingin menghapus semua cookie browser?</string>
+    <string name="action_yes">Ya</string>
+    <string name="action_no">Tidak</string>
+    <string name="title_text_size">Ukuran teks</string>
+    <string name="title_error">Kesalahan</string>
+    <string name="hint_title">Judul</string>
+    <string name="hint_url" translatable="false">URL</string>
+    <string name="title_edit_bookmark">Sunting Penanda</string>
+    <string name="action_edit">Sunting</string>
+    <string name="action_homepage">Bawaan</string>
+    <string name="action_back">Kembali</string>
+    <string name="action_find">Temukan dihalaman</string>
+    <string name="download_pending">Mulai mengunduh...</string>
+    <string name="cannot_download">Hanya dapat mengunduh URL \"http\" atau \"https\".</string>
+    <string name="problem_download">Ditemukan URL tidak valid, tidak dapat mengunduh</string>
+    <string name="problem_location_download">Tidak dapat mengunduh ke lokasi yang ditentukan</string>
+    <string name="download_no_sdcard_dlg_title">Tidak ada kartu SD</string>
+    <string name="download_no_sdcard_dlg_msg">Penyimpanan USB diperlukan untuk mengunduh file.</string>
+    <string name="download_sdcard_busy_dlg_title">Penyimpanan USB tidak tersedia</string>
+    <string name="download_sdcard_busy_dlg_msg">Gudang sedang sibuk. Untuk mengizinkan unduhan, sentuh Matikan Penyimpanan USB di notifikasi.</string>
+    <string name="message_cache_cleared">Tembolok Dihapus</string>
+    <string name="message_import">Bookmark Diimpor</string>
+    <string name="message_clear_history">Sejarah Dihapus</string>
+    <string name="message_cookies_cleared">Cookie Dihapus</string>
+    <string name="custom_url">URL khusus</string>
+    <string name="message_blocked_local">File lokal telah diblokir dari memuat</string>
+    <string name="licenses">Lisensi Sumber Terbuka</string>
+    <string name="suggestion">Pencarian untuk</string>
+    <string name="block_ads">Blokir Iklan</string>
+    <string name="message_insecure_connection">Sambungan ke situs ini tidak aman:\n%1$s\nTetap lanjutkan?</string>
+    <string name="message_certificate_date_invalid">tanggal sertifikat tidak valid</string>
+    <string name="message_certificate_expired">sertifikat kadaluarsa</string>
+    <string name="message_certificate_domain_mismatch">domain dalam sertifikat tidak cocok dengan domain situs</string>
+    <string name="message_certificate_invalid">sertifikat tidak valid</string>
+    <string name="message_certificate_not_yet_valid">sertifikat belum berlaku</string>
+    <string name="message_certificate_untrusted">sertifikat tidak dipercaya</string>
+    <string name="title_form_resubmission">Pengiriman Ulang Formulir</string>
+    <string name="message_form_resubmission">Apakah Anda ingin mengirim ulang data?</string>
+    <string name="title_sign_in">Masuk</string>
+    <string name="hint_username">Nama belakang</string>
+    <string name="hint_password">Kata sandi</string>
+    <string name="folder_default">Bawaan</string>
+    <string name="folder_custom">Kebiasaan</string>
+    <string name="untitled">Tanpa Judul</string>
+    <string name="mpl_license" translatable="false">Mozilla Public License v. 2.0</string>
+    <string name="freeware">Perangkat Lunak Gratis</string>
+    <string name="android_open_source_project" translatable="false">Android Open Source Project</string>
+    <string name="hphosts_ad_server_list">Daftar Server Iklan hpHosts</string>
+    <string name="deleted_tab">Tab lama dibuka kembali</string>
+    <string name="rendering_mode">Mode Rendering</string>
+    <string name="name_inverted">Terbalik</string>
+    <string name="name_grayscale">skala abu-abu</string>
+    <string name="name_inverted_grayscale">Skala abu-abu terbalik</string>
+    <string name="name_increase_contrast">Tingkatkan Kontras</string>
+    <string name="name_normal">Normal</string>
+    <string name="title_file_chooser">Pemilih File</string>
+    <string name="bookmark_export_path">Bookmark diekspor ke</string>
+    <string name="bookmark_export_action">Ekspor Bookmark</string>
+    <string name="bookmark_import_action">Impor Bookmark</string>
+    <string name="import_bookmark_error">Tidak dapat mengimpor bookmark dari file</string>
+    <string name="settings_general">Pengaturan Umum</string>
+    <string name="settings_display">Pengaturan tampilan</string>
+    <string name="settings_privacy">Pengaturan Privasi</string>
+    <string name="settings_about">Tentang</string>
+    <string name="settings_about_explain">Detail tentang versi, penulis, dan lisensi.</string>
+    <string name="close_tab">Tutup tab</string>
+    <string name="close_all_tabs">Tutup semua tab</string>
+    <string name="close_other_tabs">Tutup tab lain</string>
+    <string name="color_mode">Aktifkan Mode Warna</string>
+    <string name="loading">Memuat...</string>
+    <string name="snacktory" translatable="false">Snacktory</string>
+    <string name="jsoup" translatable="false">jsoup: Java HTML Parser</string>
+    <string name="mit_license" translatable="false">MIT License</string>
+    <string name="url_contents">Isi Kotak URL</string>
+    <string name="text_encoding">Pengkodean Teks</string>
+    <string-array name="url_content_array">
+        <item>Domain</item>
+        <item>URL (bawaan)</item>
+        <item>Judul</item>
+    </string-array>
+    <string name="dark_theme">Tema gelap</string>
+    <string name="tabs">tab</string>
+    <string name="theme">Tema Aplikasi</string>
+    <string name="light_theme">Tema Cahaya</string>
+    <string name="black_theme">Tema Hitam (AMOLED)</string>
+    <string name="folder">Nama folder</string>
+    <string name="action_folder">Map</string>
+    <string name="action_rename">Ganti nama</string>
+    <string name="title_rename_folder">Mengganti nama folder</string>
+    <string name="dialog_folder">Apa yang ingin Anda lakukan dengan folder ini?</string>
+    <string name="message_web_storage_cleared">Penyimpanan Web Dihapus</string>
+    <string name="tabs_in_drawer">Tampilkan tab di Laci Navigasi</string>
+    <string name="do_not_track">Permintaan "Jangan Lacak"</string>
+    <string name="remove_identifying_headers">Hapus Header Pengidentifikasi</string>
+    <string name="debug_title">Pengaturan Debug</string>
+    <string name="debug_leak_canary" translatable="false">LeakCanary</string>
+    <string name="app_restart">Silakan mulai ulang aplikasi agar perubahan diterapkan.</string>
+    <string name="app_name">Peramban Internet</string>
+    <string name="lightning_name" translatable="false">Lightning-Browser</string>
+    <string name="url_lightning" translatable="false">https://github.com/anthonycr/Lightning-Browser</string>
+    <string name="action_open_lightning" translatable="false">Based on LightningBrowser by Anthony Restaino</string>
+    <string name="finish_on_pause">Tutup aplikasi jika dipindahkan ke latar belakang</string>
+    <string name="exit">KELUAR</string>
+    <string name="exit_question">Yakin ingin menutup semua tab dan menghapus semua data pribadi?</string>
+    <string name="title_clear_all">Hapus data pribadi</string>
+    <string name="dialog_clear_all">Hapus semua data pribadi: cookie, cache, penyimpanan web, dll.</string>
+    <string name="message_clear_privatedata">Semua data pribadi dihapus</string>
+    <string name="enable_cookies">Aktifkan Cookie</string>
+    <string name="tpc_always_disabled">Cookie pihak ketiga selalu dinonaktifkan</string>
+    <string name="private_data_exit">Hapus data pribadi saat keluar</string>
+    <string name="private_data_exit_summary">cookie, penyimpanan web, database</string>
+    <string name="allow_screenshots">Izinkan tangkapan layar dan pratinjau</string>
+    <string name="screenshots_description">memungkinkan tangkapan layar dan menampilkan pratinjau di tampilan aplikasi terbaru</string>
+    <string name="msg_screenshot_title">Perhatian</string>
+    <string name="msg_screenshot_test">Aplikasi harus dimulai ulang sebelum perubahan diterapkan</string>
+    <string name="cd_open_drawer">laci terbuka</string>
+    <string name="cd_search_back">cari sebelumnya</string>
+    <string name="cd_search_next">cari selanjutnya</string>
+    <string name="cd_search_quit">berhenti mencari</string>
+    <string name="cd_tabs_close">tutup tab</string>
+    <string name="cd_tabs_actions">tindakan tab</string>
+    <string name="dialog_download_permission_denied_header">Izin ditolak</string>
+    <string name="dialog_download_permission_denied_text">Harap izinkan akses ke File dan Media di pengaturan sistem jika Anda ingin mengunduh file.</string>
+    <string name="action_change_permission">pergi ke izin</string>
+    <string name="open_pdf_with_google_docs">Buka dokumen dengan google docs</string>
+    <string name="import_bookmarks_title">Mengimpor Bookmark</string>
+    <string name="import_bookmarks_message">Bookmark yang diimpor akan ditambahkan ke bookmark Anda yang sudah ada.</string>
+    <string name="share">Membagikan</string>
+</resources>

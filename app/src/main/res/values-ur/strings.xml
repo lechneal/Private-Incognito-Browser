@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_new_tab">نیا ٹیب</string>
+    <string name="action_new_bg_tab">پس منظر میں کھولیں۔</string>
+    <string name="action_history">تاریخ</string>
+    <string name="action_bookmarks">بک مارکس</string>
+    <string name="action_add_bookmark">بک مارک شامل کریں۔</string>
+    <string name="action_copy">لنک کاپی کریں۔</string>
+    <string name="action_forward">آگے</string>
+    <string name="settings">ترتیبات</string>
+    <string name="agent" translatable="false">User Agent</string>
+    <string name="home">ہوم پیج</string>
+    <string name="fullscreen">فل سکرین موڈ</string>
+    <string name="java">جاوا اسکرپٹ کو فعال کریں۔</string>
+    <string name="download">مقام ڈاؤن لوڈ کریں۔</string>
+    <string name="settings_advanced">اعلی درجے کی ترتیبات</string>
+    <string name="apache" translatable="false">Apache License 2.0</string>
+    <string name="version">ایپلیکیشن ورژن</string>
+    <string name="cache">باہر نکلنے پر کیشے صاف کریں۔</string>
+    <string name="reflow">ٹیکسٹ ری فلو کو فعال کریں۔</string>
+    <string name="block">امیجز کو مسدود کریں۔</string>
+    <string name="window">سائٹس کو نئی ونڈوز کھولنے کی اجازت دیں۔</string>
+    <string name="recommended">تجویز کردہ</string>
+    <string name="search">سرچ انجن</string>
+    <string name="search_hint">تلاش کریں۔</string>
+    <string name="wideViewPort">وسیع ویو پورٹ استعمال کریں۔</string>
+    <string name="overViewMode">اوور ویو موڈ میں صفحات لوڈ کریں۔</string>
+    <string name="fullScreenOption">براؤزنگ کے دوران اسٹیٹس بار کو چھپائیں۔</string>
+    <string name="dialog_image">آپ اس تصویر کے ساتھ کیا کرنا چاہیں گے؟</string>
+    <string name="action_download">ڈاؤن لوڈ کریں</string>
+    <string name="action_open">کھولیں۔</string>
+    <string name="dialog_link">آپ اس لنک کے ساتھ کیا کرنا چاہیں گے؟</string>
+    <string name="dialog_history_long_press">آپ اس ہسٹری آئٹم کے ساتھ کیا کرنا چاہیں گے؟</string>
+    <string name="dialog_bookmark">آپ اس بک مارک کے ساتھ کیا کرنا چاہیں گے؟</string>
+    <string name="action_delete">حذف کریں۔</string>
+    <string name="action_blank">خالی صفحہ</string>
+    <string name="agent_default">طے شدہ</string>
+    <string name="agent_desktop">ڈیسک ٹاپ</string>
+    <string name="agent_mobile">موبائل</string>
+    <string name="agent_custom">اپنی مرضی کے مطابق</string>
+    <string name="title_search_engine">سرچ انجن</string>
+    <string name="action_ok">ٹھیک ہے</string>
+    <string name="dialog_download">کیا آپ اس فائل کو ڈاؤن لوڈ کرنا چاہتے ہیں؟</string>
+    <string name="action_cancel">منسوخ کریں۔</string>
+    <string name="title_warning">وارننگ</string>
+    <string name="title_download_location">مقام ڈاؤن لوڈ کریں۔</string>
+    <string name="title_custom_homepage">حسب ضرورت ہوم پیج</string>
+    <string name="action_webpage">ویب صفحہ</string>
+    <string name="title_clear_cookies">کوکیز صاف کریں۔</string>
+    <string name="dialog_cookies">کیا آپ تمام براؤزر کوکیز کو صاف کرنا چاہیں گے؟</string>
+    <string name="action_yes">جی ہاں</string>
+    <string name="action_no">نہیں</string>
+    <string name="title_text_size">متن کا سائز</string>
+    <string name="title_error">خرابی</string>
+    <string name="hint_title">عنوان</string>
+    <string name="hint_url" translatable="false">URL</string>
+    <string name="title_edit_bookmark">بک مارک میں ترمیم کریں۔</string>
+    <string name="action_edit">ترمیم</string>
+    <string name="action_homepage">طے شدہ</string>
+    <string name="action_back">پیچھے</string>
+    <string name="action_find">صفحہ میں تلاش کریں۔</string>
+    <string name="download_pending">ڈاؤن لوڈ شروع ہو رہا ہے...</string>
+    <string name="cannot_download">صرف \"http\" یا \"https\" URLs ڈاؤن لوڈ کرسکتے ہیں۔</string>
+    <string name="problem_download">غلط URL کا سامنا ہوا، ڈاؤن لوڈ نہیں ہو سکتا</string>
+    <string name="problem_location_download">مخصوص جگہ پر ڈاؤن لوڈ نہیں ہو سکتا</string>
+    <string name="download_no_sdcard_dlg_title">کوئی SD کارڈ نہیں ہے۔</string>
+    <string name="download_no_sdcard_dlg_msg">فائل ڈاؤن لوڈ کرنے کے لیے USB اسٹوریج کی ضرورت ہے۔</string>
+    <string name="download_sdcard_busy_dlg_title">USB اسٹوریج دستیاب نہیں ہے۔</string>
+    <string name="download_sdcard_busy_dlg_msg">اسٹوریج مصروف ہے۔ ڈاؤن لوڈ کی اجازت دینے کے لیے، نوٹیفکیشن میں USB اسٹوریج کو بند کریں کو ٹچ کریں۔</string>
+    <string name="message_cache_cleared">کیشے صاف ہو گیا۔</string>
+    <string name="message_import">بک مارکس درآمد کیے گئے تھے۔</string>
+    <string name="message_clear_history">تاریخ صاف کر دی گئی۔</string>
+    <string name="message_cookies_cleared">کوکیز صاف کر دی گئیں۔</string>
+    <string name="custom_url">حسب ضرورت URL</string>
+    <string name="message_blocked_local">مقامی فائل کو لوڈ کرنے سے روک دیا گیا ہے۔</string>
+    <string name="licenses">اوپن سورس لائسنس</string>
+    <string name="suggestion">تلاش کریں۔</string>
+    <string name="block_ads">اشتہارات کو مسدود کریں۔</string>
+    <string name="message_insecure_connection">اس سائٹ سے کنکشن محفوظ نہیں ہے:\n%1$s\nبہرحال آگے بڑھیں؟</string>
+    <string name="message_certificate_date_invalid">سرٹیفکیٹ کی تاریخ غلط ہے۔</string>
+    <string name="message_certificate_expired">سرٹیفکیٹ ختم ہو گیا ہے</string>
+    <string name="message_certificate_domain_mismatch">سرٹیفکیٹ میں ڈومین سائٹ کے ڈومین سے مماثل نہیں ہے۔</string>
+    <string name="message_certificate_invalid">سرٹیفکیٹ غلط ہے</string>
+    <string name="message_certificate_not_yet_valid">سرٹیفکیٹ ابھی تک درست نہیں ہے۔</string>
+    <string name="message_certificate_untrusted">سرٹیفکیٹ قابل اعتبار نہیں ہے۔</string>
+    <string name="title_form_resubmission">فارم دوبارہ جمع کرانا</string>
+    <string name="message_form_resubmission">کیا آپ ڈیٹا دوبارہ بھیجنا چاہیں گے؟</string>
+    <string name="title_sign_in">سائن ان</string>
+    <string name="hint_username">صارف نام</string>
+    <string name="hint_password">پاس ورڈ</string>
+    <string name="folder_default">طے شدہ</string>
+    <string name="folder_custom">اپنی مرضی کے مطابق</string>
+    <string name="untitled">بلا عنوان</string>
+    <string name="mpl_license" translatable="false">Mozilla Public License v. 2.0</string>
+    <string name="freeware">فری ویئر</string>
+    <string name="android_open_source_project" translatable="false">Android Open Source Project</string>
+    <string name="hphosts_ad_server_list">hpHosts اشتھاراتی سرور کی فہرست</string>
+    <string name="deleted_tab">پرانا ٹیب دوبارہ کھولا۔</string>
+    <string name="rendering_mode">رینڈرنگ موڈ</string>
+    <string name="name_inverted">الٹا</string>
+    <string name="name_grayscale">گرے اسکیل</string>
+    <string name="name_inverted_grayscale">الٹا مٹیالا پیمانہ</string>
+    <string name="name_increase_contrast">کنٹراسٹ میں اضافہ کریں۔</string>
+    <string name="name_normal">نارمل</string>
+    <string name="title_file_chooser">فائل کا انتخاب کنندہ</string>
+    <string name="bookmark_export_path">بُک مارکس کو برآمد کیا گیا۔</string>
+    <string name="bookmark_export_action">بک مارکس برآمد کریں۔</string>
+    <string name="bookmark_import_action">بُک مارکس درآمد کریں۔</string>
+    <string name="import_bookmark_error">فائل سے بُک مارکس درآمد نہیں کیے جا سکے۔</string>
+    <string name="settings_general">عام ترتیبات</string>
+    <string name="settings_display">ڈسپلے کی ترتیبات</string>
+    <string name="settings_privacy">رازداری کی ترتیبات</string>
+    <string name="settings_about">کے بارے میں</string>
+    <string name="settings_about_explain">ورژن، مصنف اور لائسنس کے بارے میں تفصیلات۔</string>
+    <string name="close_tab">ٹیب بند کریں۔</string>
+    <string name="close_all_tabs">تمام ٹیبز بند کریں۔</string>
+    <string name="close_other_tabs">دوسرے ٹیبز کو بند کریں۔</string>
+    <string name="color_mode">کلر موڈ کو فعال کریں۔</string>
+    <string name="loading">لوڈ ہو رہا ہے...</string>
+    <string name="snacktory" translatable="false">Snacktory</string>
+    <string name="jsoup" translatable="false">jsoup: Java HTML Parser</string>
+    <string name="mit_license" translatable="false">MIT License</string>
+    <string name="url_contents">URL باکس کے مشمولات</string>
+    <string name="text_encoding">ٹیکسٹ انکوڈنگ</string>
+    <string-array name="url_content_array">
+        <item>ڈومین</item>
+        <item>URL (پہلے سے طے شدہ)</item>
+        <item>عنوان</item>
+    </string-array>
+    <string name="dark_theme">ڈارک تھیم</string>
+    <string name="tabs">ٹیبز</string>
+    <string name="theme">ایپ تھیم</string>
+    <string name="light_theme">ہلکی تھیم</string>
+    <string name="black_theme">بلیک تھیم (AMOLED)</string>
+    <string name="folder">فولڈر کا نام</string>
+    <string name="action_folder">فولڈر</string>
+    <string name="action_rename">نام تبدیل کریں۔</string>
+    <string name="title_rename_folder">فولڈر کا نام تبدیل کریں۔</string>
+    <string name="dialog_folder">آپ اس فولڈر کے ساتھ کیا کرنا چاہیں گے؟</string>
+    <string name="message_web_storage_cleared">ویب سٹوریج صاف ہو گیا۔</string>
+    <string name="tabs_in_drawer">نیویگیشن دراز میں ٹیبز دکھائیں۔</string>
+    <string name="do_not_track">درخواست کریں "ٹریک نہ کریں"</string>
+    <string name="remove_identifying_headers">شناختی ہیڈرز کو ہٹا دیں۔</string>
+    <string name="debug_title">ڈیبگ کی ترتیبات</string>
+    <string name="debug_leak_canary" translatable="false">LeakCanary</string>
+    <string name="app_restart">تبدیلی کے اثر میں آنے کے لیے براہ کرم ایپ کو دوبارہ شروع کریں۔</string>
+    <string name="app_name">انٹر نیٹ براؤزر</string>
+    <string name="lightning_name" translatable="false">Lightning-Browser</string>
+    <string name="url_lightning" translatable="false">https://github.com/anthonycr/Lightning-Browser</string>
+    <string name="action_open_lightning" translatable="false">Based on LightningBrowser by Anthony Restaino</string>
+    <string name="finish_on_pause">پس منظر میں منتقل ہونے پر ایپ کو بند کریں۔</string>
+    <string name="exit">باہر نکلیں</string>
+    <string name="exit_question">کیا آپ کو یقین ہے کہ آپ تمام ٹیبز کو بند کرنا چاہتے ہیں اور تمام نجی ڈیٹا کو حذف کرنا چاہتے ہیں؟</string>
+    <string name="title_clear_all">نجی ڈیٹا کو حذف کریں۔</string>
+    <string name="dialog_clear_all">تمام نجی ڈیٹا کو حذف کریں: کوکیز، کیشے، ویب اسٹوریج وغیرہ۔</string>
+    <string name="message_clear_privatedata">تمام نجی ڈیٹا حذف کر دیا گیا۔</string>
+    <string name="enable_cookies">کوکیز کو فعال کریں۔</string>
+    <string name="tpc_always_disabled">فریق ثالث کوکیز ہمیشہ غیر فعال رہتی ہیں۔</string>
+    <string name="private_data_exit">باہر نکلنے پر نجی ڈیٹا صاف کریں۔</string>
+    <string name="private_data_exit_summary">کوکیز، ویب اسٹوریج، ڈیٹا بیس</string>
+    <string name="allow_screenshots">اسکرین شاٹس اور پیش نظارہ کی اجازت دیں۔</string>
+    <string name="screenshots_description">اسکرین شاٹس کی اجازت دیتا ہے اور حالیہ ایپس ویو میں پیش نظارہ دکھاتا ہے۔</string>
+    <string name="msg_screenshot_title">توجہ</string>
+    <string name="msg_screenshot_test">تبدیلی کے اثر میں آنے سے پہلے ایپ کو دوبارہ شروع کرنا ضروری ہے۔</string>
+    <string name="cd_open_drawer">کھلی دراز</string>
+    <string name="cd_search_back">گزشتہ تلاش کریں</string>
+    <string name="cd_search_next">اگلا تلاش کریں</string>
+    <string name="cd_search_quit">تلاش بند کرو</string>
+    <string name="cd_tabs_close">ٹیب بند کریں</string>
+    <string name="cd_tabs_actions">ٹیبز کے اعمال</string>
+    <string name="dialog_download_permission_denied_header">اجازت نہیں دی گئی</string>
+    <string name="dialog_download_permission_denied_text">اگر آپ فائلیں ڈاؤن لوڈ کرنا چاہتے ہیں تو براہ کرم سسٹم کی ترتیبات میں فائلز اور میڈیا تک رسائی کی اجازت دیں۔</string>
+    <string name="action_change_permission">اجازتوں پر جائیں۔</string>
+    <string name="open_pdf_with_google_docs">گوگل دستاویزات کے ساتھ دستاویزات کھولیں۔</string>
+    <string name="import_bookmarks_title">بُک مارکس درآمد کرنا</string>
+    <string name="import_bookmarks_message">درآمد شدہ بُک مارکس کو آپ کے موجودہ بُک مارکس میں شامل کر دیا جائے گا۔</string>
+    <string name="share">بانٹیں</string>
+</resources>

@@ -16,119 +16,179 @@
 -->
 
 <resources>
-
-    <string name="action_new_tab">Új Lap</string>
-    <string name="action_history">Előzmények</string>
+    <string name="action_new_tab">Új lap</string>
+    <string name="action_new_bg_tab">Megnyitás a háttérben</string>
+    <string name="action_history">Történelem</string>
     <string name="action_bookmarks">Könyvjelzők</string>
-    <string name="action_add_bookmark">Hozzáadás a könyvjelzőkhöz</string>
+    <string name="action_add_bookmark">Könyvjelző hozzáadása</string>
     <string name="action_copy">Link másolása</string>
     <string name="action_forward">Előre</string>
     <string name="settings">Beállítások</string>
-    <string name="agent">Felhasználó Ügynök</string>
-    <string name="home">Főoldal</string>
+    <string name="agent" translatable="false">User Agent</string>
+    <string name="home">Kezdőlap</string>
     <string name="fullscreen">Teljes képernyős mód</string>
-    <string name="java">JavaScript bekapcsolása</string>
-    <string name="download">Letöltési hely</string>
-    <string name="settings_advanced">Speciális Beállítások</string>
-    <string name="apache">Apache License 2.0</string>
-    <string name="version">Alkalmazás Verzió</string>
+    <string name="java">JavaScript engedélyezése</string>
+    <string name="download">Letöltés helye</string>
+    <string name="settings_advanced">További beállítások</string>
+    <string name="apache" translatable="false">Apache License 2.0</string>
+    <string name="version">Alkalmazás verziója</string>
     <string name="cache">Gyorsítótár törlése kilépéskor</string>
-    <string name="reflow">Szövegtördelés bekapcsolása</string>
+    <string name="reflow">Szöveg áttördelésének engedélyezése</string>
     <string name="block">Képek blokkolása</string>
-    <string name="window">Engedélyezés,hogy a webhelyek új lapot nyithassanak meg</string>
+    <string name="window">Engedélyezze a webhelyeknek új ablakok megnyitását</string>
     <string name="recommended">Ajánlott</string>
     <string name="search">Keresőmotor</string>
     <string name="search_hint">Keresés</string>
-    <string name="wideViewPort">Széles nézőport használata</string>
-    <string name="overViewMode">Oldalak betöltése áttekinthető módban</string>
-    <string name="fullScreenOption">Állapotsáv elrejtése böngészés közben</string>
+    <string name="wideViewPort">Használjon széles nézetet</string>
+    <string name="overViewMode">Oldalak betöltése áttekintés módban</string>
+    <string name="fullScreenOption">Az állapotsor elrejtése böngészés közben</string>
     <string name="dialog_image">Mit szeretnél csinálni ezzel a képpel?</string>
     <string name="action_download">Letöltés</string>
-    <string name="action_open">Megnyitás</string>
+    <string name="action_open">Nyisd ki</string>
     <string name="dialog_link">Mit szeretnél csinálni ezzel a linkkel?</string>
-    <string name="dialog_bookmark">Mit szeretnél csinálni ezzel a könyvjelzővel?</string>
-    <string name="action_delete">Törlés</string>
-    <string name="action_blank">Üres oldal</string>
+    <string name="dialog_history_long_press">Mit szeretnél csinálni ezzel az előzményelemmel?</string>
+    <string name="dialog_bookmark">Mit szeretne csinálni ezzel a könyvjelzővel?</string>
+    <string name="action_delete">Töröl</string>
+    <string name="action_blank">Üres lap</string>
     <string name="agent_default">Alapértelmezett</string>
     <string name="agent_desktop">Asztali</string>
     <string name="agent_mobile">Mobil</string>
-    <string name="agent_custom">Egyéni</string>
+    <string name="agent_custom">Egyedi</string>
     <string name="title_search_engine">Keresőmotor</string>
-    <string name="action_ok">OK</string>
-    <string name="dialog_download">Le szeretnéd tölteni ezt a fájlt?</string>
-    <string name="action_cancel">Mégse</string>
-    <string name="title_warning">Figyelmeztetés</string>
-    <string name="title_user_agent">Felhasználói ügynök</string>
-    <string name="title_download_location">Letöltési hely</string>
-    <string name="title_custom_homepage">Egyéni honlap</string>
+    <string name="action_ok">rendben</string>
+    <string name="dialog_download">Szeretné letölteni ezt a fájlt?</string>
+    <string name="action_cancel">Megszünteti</string>
+    <string name="title_warning">Figyelem</string>
+    <string name="title_download_location">Letöltés helye</string>
+    <string name="title_custom_homepage">Egyedi kezdőlap</string>
     <string name="action_webpage">Honlap</string>
     <string name="title_clear_cookies">Cookie-k törlése</string>
-    <string name="dialog_cookies">Szeretnéd törölni az összes cookie-t?</string>
+    <string name="dialog_cookies">Törölni szeretné a böngésző összes cookie-ját?</string>
     <string name="action_yes">Igen</string>
     <string name="action_no">Nem</string>
-    <string name="title_text_size">Szöveg méret</string>
+    <string name="title_text_size">Szövegméret</string>
     <string name="title_error">Hiba</string>
     <string name="hint_title">Cím</string>
-    <string name="hint_url">URL</string>
+    <string name="hint_url" translatable="false">URL</string>
     <string name="title_edit_bookmark">Könyvjelző szerkesztése</string>
     <string name="action_edit">Szerkesztés</string>
     <string name="action_homepage">Alapértelmezett</string>
     <string name="action_back">Vissza</string>
-    <string name="action_find">Keresés az oldalon</string>
-    <string name="download_pending">Letöltés elkezdése\u2026</string>
-    <string name="cannot_download">Csak \"http\" vagy \"https\" URL-eket lehet letölteni.</string>
-    <string name="download_no_sdcard_dlg_title" >Nincs SD kártya</string>
-    <string name="download_no_sdcard_dlg_msg" >USB tárolóra van szükség a fájl letöltéséhez.</string>
-    <string name="download_sdcard_busy_dlg_title">USB-tár nem elérhető</string>
-    <string name="download_sdcard_busy_dlg_msg" >A tároló dolgozik.Hogy engedélyezze a letöltéseket , érintse meg az USB-tár kikapcsolását az értesítésnél.</string>
+    <string name="action_find">Keresse meg az oldalon</string>
+    <string name="download_pending">Letöltés indítása...</string>
+    <string name="cannot_download">Csak \"http\" vagy \"https\" URL-ek tölthetők le.</string>
+    <string name="problem_download">Érvénytelen URL, nem lehet letölteni</string>
+    <string name="problem_location_download">Nem lehet letölteni a megadott helyre</string>
+    <string name="download_no_sdcard_dlg_title">Nincs SD kártya</string>
+    <string name="download_no_sdcard_dlg_msg">A fájl letöltéséhez USB-tárolóra van szükség.</string>
+    <string name="download_sdcard_busy_dlg_title">USB-tárhely nem érhető el</string>
+    <string name="download_sdcard_busy_dlg_msg">A tároló foglalt. A letöltések engedélyezéséhez érintse meg az USB-tár kikapcsolása lehetőséget az értesítésben.</string>
     <string name="message_cache_cleared">Gyorsítótár törölve</string>
-    <string name="message_import">Könyvjelzők importálva</string>
+    <string name="message_import">A könyvjelzők importálva lettek</string>
     <string name="message_clear_history">Előzmények törölve</string>
     <string name="message_cookies_cleared">Cookie-k törölve</string>
     <string name="custom_url">Egyéni URL</string>
-    <string name="message_blocked_local">Helyi fájl betöltése blokkolva</string>
+    <string name="message_blocked_local">A helyi fájl betöltése le van tiltva</string>
     <string name="licenses">Nyílt forráskódú licencek</string>
-    <string name="suggestion">Keresés</string>
-    <string name="block_ads">Reklámok blokkolása</string>
+    <string name="suggestion">Keressen rá</string>
+    <string name="block_ads">Hirdetések blokkolása</string>
+    <string name="message_insecure_connection">A webhelyhez való csatlakozás nem biztonságos:\n%1$s\nMégis folytatja?</string>
+    <string name="message_certificate_date_invalid">a tanúsítvány dátuma érvénytelen</string>
+    <string name="message_certificate_expired">tanúsítvány lejárt</string>
+    <string name="message_certificate_domain_mismatch">A tanúsítványban szereplő domain nem egyezik a webhely domainjével</string>
+    <string name="message_certificate_invalid">a tanúsítvány érvénytelen</string>
+    <string name="message_certificate_not_yet_valid">a tanúsítvány még nem érvényes</string>
+    <string name="message_certificate_untrusted">tanúsítvány nem megbízható</string>
     <string name="title_form_resubmission">Űrlap újraküldése</string>
-    <string name="message_form_resubmission">Szeretnél újból elküldi az adatokat?</string>
+    <string name="message_form_resubmission">Szeretné újra elküldeni az adatokat?</string>
     <string name="title_sign_in">Bejelentkezés</string>
     <string name="hint_username">Felhasználónév</string>
     <string name="hint_password">Jelszó</string>
     <string name="folder_default">Alapértelmezett</string>
-    <string name="folder_custom">Egyéni</string>
+    <string name="folder_custom">Egyedi</string>
     <string name="untitled">Névtelen</string>
-    <string name="mpl_license">Mozilla Public License v. 2.0</string>
-    <string name="freeware">Freeware</string>
-    <string name="android_open_source_project">Android Open Source Project</string>
-    <string name="hphosts_ad_server_list">hpHosts Ad Server Lista</string>
-    <string name="deleted_tab">Régi lapok megnyitása</string>
-    <string name="rendering_mode">Megjelenítési mód</string>
-    <string name="name_inverted">Negatív</string>
+    <string name="mpl_license" translatable="false">Mozilla Public License v. 2.0</string>
+    <string name="freeware">Ingyenes szoftver</string>
+    <string name="android_open_source_project" translatable="false">Android Open Source Project</string>
+    <string name="hphosts_ad_server_list">hpHosts hirdetéskiszolgálók listája</string>
+    <string name="deleted_tab">A régi lap újra megnyitva</string>
+    <string name="rendering_mode">Rendering mód</string>
+    <string name="name_inverted">Fordított</string>
     <string name="name_grayscale">Szürkeárnyalatos</string>
-    <string name="name_inverted_grayscale">Negatív szürkeárnyalatos</string>
+    <string name="name_inverted_grayscale">Fordított szürkeárnyalatos</string>
+    <string name="name_increase_contrast">Kontraszt növelése</string>
     <string name="name_normal">Normál</string>
-    <string name="title_file_chooser">Fájl választó</string>
-    <string name="bookmark_export_path">Könyvjelző exportálva</string>
-    <string name="import_bookmark_error">Nem sikerült importálni a könyvjelzőket a fájlból</string>
-    <string name="settings_general">Általános Beállítások</string>
-    <string name="settings_display">Megjelenítési Beállítások</string>
-    <string name="settings_privacy">Adatvédelmi Beállítások</string>
-    <string name="settings_about">Névjegy</string>
-    <string name="settings_about_explain">Részletek az alkalmazás verziószámáról, a készítőről és a licencekről.</string>
+    <string name="title_file_chooser">Fájlválasztó</string>
+    <string name="bookmark_export_path">Könyvjelzők exportálva ide</string>
+    <string name="bookmark_export_action">Könyvjelzők exportálása</string>
+    <string name="bookmark_import_action">Könyvjelzők importálása</string>
+    <string name="import_bookmark_error">Nem sikerült könyvjelzőket importálni a fájlból</string>
+    <string name="settings_general">Általános beállítások</string>
+    <string name="settings_display">Megjelenítési beállítások</string>
+    <string name="settings_privacy">Adatvédelmi beállítások</string>
+    <string name="settings_about">Ról ről</string>
+    <string name="settings_about_explain">Részletek a verzióról, a szerzőről és a licencről.</string>
     <string name="close_tab">Lap bezárása</string>
-    <string name="close_all_tabs">Összes lap bezárása</string>
-    <string name="color_mode">Színes mód engedélyezése</string>
-    <string name="loading">Betöltés&#8230;</string>
-    <string name="snacktory">Snacktory</string>
-    <string name="jsoup">jsoup: Java HTML Parser</string>
-    <string name="mit_license">MIT License</string>
+    <string name="close_all_tabs">Zárja be az összes lapot</string>
+    <string name="close_other_tabs">Zárja be a többi fület</string>
+    <string name="color_mode">Szín mód engedélyezése</string>
+    <string name="loading">Betöltés...</string>
+    <string name="snacktory" translatable="false">Snacktory</string>
+    <string name="jsoup" translatable="false">jsoup: Java HTML Parser</string>
+    <string name="mit_license" translatable="false">MIT License</string>
     <string name="url_contents">URL doboz tartalma</string>
+    <string name="text_encoding">Szövegkódolás</string>
     <string-array name="url_content_array">
-        <item >Domain</item>
-        <item >URL (alapértelmezett)</item>
-        <item >Cím</item>
+        <item>Tartomány</item>
+        <item>URL (alapértelmezett)</item>
+        <item>Cím</item>
     </string-array>
-    <string name="dark_theme">Sötét téma </string>
-        <string name="tabs">Lapok</string>
+    <string name="dark_theme">Sötét téma</string>
+    <string name="tabs">Tabs</string>
+    <string name="theme">App téma</string>
+    <string name="light_theme">Fény téma</string>
+    <string name="black_theme">Fekete téma (AMOLED)</string>
+    <string name="folder">Mappa neve</string>
+    <string name="action_folder">Mappa</string>
+    <string name="action_rename">Átnevezés</string>
+    <string name="title_rename_folder">Mappa átnevezése</string>
+    <string name="dialog_folder">Mit szeretne csinálni ezzel a mappával?</string>
+    <string name="message_web_storage_cleared">Webtárhely törölve</string>
+    <string name="tabs_in_drawer">Lapok megjelenítése a Navigációs fiókban</string>
+    <string name="do_not_track">\"Ne nyomon követése\" kérése</string>
+    <string name="remove_identifying_headers">Távolítsa el az azonosító fejléceket</string>
+    <string name="debug_title">Hibakeresési beállítások</string>
+    <string name="debug_leak_canary" translatable="false">LeakCanary</string>
+    <string name="app_restart">Kérjük, indítsa újra az alkalmazást, hogy a módosítás érvénybe lépjen.</string>
+    <string name="app_name">Internet böngésző</string>
+    <string name="lightning_name" translatable="false">Lightning-Browser</string>
+    <string name="url_lightning" translatable="false">https://github.com/anthonycr/Lightning-Browser</string>
+    <string name="action_open_lightning" translatable="false">Based on LightningBrowser by Anthony Restaino</string>
+    <string name="finish_on_pause">Zárja be az alkalmazást, ha a háttérbe került</string>
+    <string name="exit">Kijárat</string>
+    <string name="exit_question">Biztosan bezárja az összes lapot, és törölni szeretné az összes személyes adatot?</string>
+    <string name="title_clear_all">Személyes adatok törlése</string>
+    <string name="dialog_clear_all">Törölje az összes személyes adatot: cookie-kat, gyorsítótárat, webtárhelyet stb.</string>
+    <string name="message_clear_privatedata">Minden személyes adat törölve</string>
+    <string name="enable_cookies">Cookie-k engedélyezése</string>
+    <string name="tpc_always_disabled">A harmadik féltől származó cookie-k mindig le vannak tiltva</string>
+    <string name="private_data_exit">Személyes adatok törlése kilépéskor</string>
+    <string name="private_data_exit_summary">cookie-k, webtárhely, adatbázisok</string>
+    <string name="allow_screenshots">Képernyőképek és előnézet engedélyezése</string>
+    <string name="screenshots_description">képernyőképeket tesz lehetővé, és megjeleníti az előnézetet a legutóbbi alkalmazások nézetében</string>
+    <string name="msg_screenshot_title">Figyelem</string>
+    <string name="msg_screenshot_test">Az alkalmazást újra kell indítani, mielőtt a változás életbe lép</string>
+    <string name="cd_open_drawer">nyitott fiók</string>
+    <string name="cd_search_back">keresés előző</string>
+    <string name="cd_search_next">keresse tovább</string>
+    <string name="cd_search_quit">kilép a keresésből</string>
+    <string name="cd_tabs_close">fül bezárása</string>
+    <string name="cd_tabs_actions">lapok műveletei</string>
+    <string name="dialog_download_permission_denied_header">Hozzáférés megtagadva</string>
+    <string name="dialog_download_permission_denied_text">Ha fájlokat szeretne letölteni, engedélyezze a hozzáférést a Fájlok és Média elemhez a rendszerbeállításokban.</string>
+    <string name="action_change_permission">lépjen az engedélyekhez</string>
+    <string name="open_pdf_with_google_docs">Nyissa meg a dokumentumokat a Google docs segítségével</string>
+    <string name="import_bookmarks_title">Könyvjelzők importálása</string>
+    <string name="import_bookmarks_message">Az importált könyvjelzők hozzáadódnak a meglévő könyvjelzőihez.</string>
+    <string name="share">Részvény</string>
 </resources>

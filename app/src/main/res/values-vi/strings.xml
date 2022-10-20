@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_new_tab">Tab mới</string>
+    <string name="action_new_bg_tab">Mở trong nền</string>
+    <string name="action_history">Lịch sử</string>
+    <string name="action_bookmarks">Dấu trang</string>
+    <string name="action_add_bookmark">Thêm dấu trang</string>
+    <string name="action_copy">Sao chép đường dẫn</string>
+    <string name="action_forward">Ở đằng trước</string>
+    <string name="settings">Cài đặt</string>
+    <string name="agent" translatable="false">User Agent</string>
+    <string name="home">Trang chủ</string>
+    <string name="fullscreen">Chế độ toàn màn hình</string>
+    <string name="java">Bật JavaScript</string>
+    <string name="download">Tải xuống vị trí</string>
+    <string name="settings_advanced">Cài đặt nâng cao</string>
+    <string name="apache" translatable="false">Apache License 2.0</string>
+    <string name="version">Phiên bản ứng dụng</string>
+    <string name="cache">Xóa bộ nhớ cache khi thoát</string>
+    <string name="reflow">Bật chỉnh lại văn bản</string>
+    <string name="block">Chặn hình ảnh</string>
+    <string name="window">Cho phép các trang web mở cửa sổ mới</string>
+    <string name="recommended">Khuyến khích</string>
+    <string name="search">Máy tìm kiếm</string>
+    <string name="search_hint">Tìm kiếm</string>
+    <string name="wideViewPort">Sử dụng khung nhìn rộng</string>
+    <string name="overViewMode">Tải trang ở chế độ tổng quan</string>
+    <string name="fullScreenOption">Ẩn thanh trạng thái trong khi duyệt</string>
+    <string name="dialog_image">Bạn muốn làm gì với hình ảnh này?</string>
+    <string name="action_download">Tải xuống</string>
+    <string name="action_open">Mở</string>
+    <string name="dialog_link">Bạn muốn làm gì với liên kết này?</string>
+    <string name="dialog_history_long_press">Bạn muốn làm gì với mục lịch sử này?</string>
+    <string name="dialog_bookmark">Bạn muốn làm gì với dấu trang này?</string>
+    <string name="action_delete">Xóa bỏ</string>
+    <string name="action_blank">Trang trống</string>
+    <string name="agent_default">Mặc định</string>
+    <string name="agent_desktop">Máy tính để bàn</string>
+    <string name="agent_mobile">Di động</string>
+    <string name="agent_custom">Phong tục</string>
+    <string name="title_search_engine">Máy tìm kiếm</string>
+    <string name="action_ok">ĐƯỢC RỒI</string>
+    <string name="dialog_download">Bạn có muốn tải xuống tệp này không?</string>
+    <string name="action_cancel">Hủy bỏ</string>
+    <string name="title_warning">Cảnh báo</string>
+    <string name="title_download_location">Tải xuống vị trí</string>
+    <string name="title_custom_homepage">Trang chủ tùy chỉnh</string>
+    <string name="action_webpage">Trang web</string>
+    <string name="title_clear_cookies">Xoá cookies</string>
+    <string name="dialog_cookies">Bạn có muốn xóa tất cả cookie của trình duyệt không?</string>
+    <string name="action_yes">Đúng</string>
+    <string name="action_no">Không</string>
+    <string name="title_text_size">Cỡ chữ</string>
+    <string name="title_error">Lỗi</string>
+    <string name="hint_title">Tiêu đề</string>
+    <string name="hint_url" translatable="false">URL</string>
+    <string name="title_edit_bookmark">Chỉnh sửa Dấu trang</string>
+    <string name="action_edit">Chỉnh sửa</string>
+    <string name="action_homepage">Mặc định</string>
+    <string name="action_back">Mặt sau</string>
+    <string name="action_find">Tìm ở trang</string>
+    <string name="download_pending">Bắt đầu tải về...</string>
+    <string name="cannot_download">Chỉ có thể tải xuống các URL \"http \" hoặc \"https \".</string>
+    <string name="problem_download">Đã gặp phải URL không hợp lệ, không thể tải xuống</string>
+    <string name="problem_location_download">Không thể tải xuống vị trí đã chỉ định</string>
+    <string name="download_no_sdcard_dlg_title">Không có thẻ SD</string>
+    <string name="download_no_sdcard_dlg_msg">Cần có bộ nhớ USB để tải tệp xuống.</string>
+    <string name="download_sdcard_busy_dlg_title">Bộ nhớ USB không khả dụng</string>
+    <string name="download_sdcard_busy_dlg_msg">Kho đang bận. Để cho phép tải xuống, chạm vào Tắt bộ nhớ USB trong thông báo.</string>
+    <string name="message_cache_cleared">Đã xóa bộ nhớ cache</string>
+    <string name="message_import">Dấu trang đã được nhập</string>
+    <string name="message_clear_history">Lịch sử được xóa</string>
+    <string name="message_cookies_cleared">Đã xóa cookie</string>
+    <string name="custom_url">URL tùy chỉnh</string>
+    <string name="message_blocked_local">Tệp cục bộ đã bị chặn tải</string>
+    <string name="licenses">Giấy phép nguồn mở</string>
+    <string name="suggestion">Tìm kiếm</string>
+    <string name="block_ads">Chặn quảng cáo</string>
+    <string name="message_insecure_connection">Kết nối với trang web này không an toàn: \n%1$s \nVẫn tiếp tục?</string>
+    <string name="message_certificate_date_invalid">ngày của chứng chỉ không hợp lệ</string>
+    <string name="message_certificate_expired">chứng chỉ đã hết hạn</string>
+    <string name="message_certificate_domain_mismatch">miền trong chứng chỉ không khớp với miền trang web</string>
+    <string name="message_certificate_invalid">chứng chỉ không hợp lệ</string>
+    <string name="message_certificate_not_yet_valid">chứng chỉ chưa hợp lệ</string>
+    <string name="message_certificate_untrusted">chứng chỉ không đáng tin cậy</string>
+    <string name="title_form_resubmission">Gửi lại biểu mẫu</string>
+    <string name="message_form_resubmission">Bạn có muốn gửi lại dữ liệu không?</string>
+    <string name="title_sign_in">Đăng nhập</string>
+    <string name="hint_username">tên tài khoản</string>
+    <string name="hint_password">Mật khẩu</string>
+    <string name="folder_default">Mặc định</string>
+    <string name="folder_custom">Phong tục</string>
+    <string name="untitled">Không có tiêu đề</string>
+    <string name="mpl_license" translatable="false">Mozilla Public License v. 2.0</string>
+    <string name="freeware">Phần mềm miễn phí</string>
+    <string name="android_open_source_project" translatable="false">Android Open Source Project</string>
+    <string name="hphosts_ad_server_list">hpHosts Danh sách Máy chủ Quảng cáo</string>
+    <string name="deleted_tab">Đã mở lại tab cũ</string>
+    <string name="rendering_mode">Chế độ kết xuất</string>
+    <string name="name_inverted">Đảo ngược</string>
+    <string name="name_grayscale">Thang độ xám</string>
+    <string name="name_inverted_grayscale">Đảo ngược thang độ xám</string>
+    <string name="name_increase_contrast">gia tăng sự tương phản</string>
+    <string name="name_normal">Bình thường</string>
+    <string name="title_file_chooser">Trình chọn tệp</string>
+    <string name="bookmark_export_path">Dấu trang được xuất sang</string>
+    <string name="bookmark_export_action">Xuất dấu trang</string>
+    <string name="bookmark_import_action">Nhập dấu trang</string>
+    <string name="import_bookmark_error">Không thể nhập dấu trang từ tệp</string>
+    <string name="settings_general">Cài đặt chung</string>
+    <string name="settings_display">Thiết lập hiển thị</string>
+    <string name="settings_privacy">Những thiết lập riêng tư</string>
+    <string name="settings_about">Về</string>
+    <string name="settings_about_explain">Thông tin chi tiết về phiên bản, tác giả và giấy phép.</string>
+    <string name="close_tab">Đóng tab</string>
+    <string name="close_all_tabs">Đóng tất cả cửa sổ</string>
+    <string name="close_other_tabs">Đóng các tab khác</string>
+    <string name="color_mode">Bật chế độ màu</string>
+    <string name="loading">Đang tải...</string>
+    <string name="snacktory" translatable="false">Snacktory</string>
+    <string name="jsoup" translatable="false">jsoup: Java HTML Parser</string>
+    <string name="mit_license" translatable="false">MIT License</string>
+    <string name="url_contents">Nội dung hộp URL</string>
+    <string name="text_encoding">Mã hóa văn bản</string>
+    <string-array name="url_content_array">
+        <item>Miền</item>
+        <item>URL (mặc định)</item>
+        <item>Tiêu đề</item>
+    </string-array>
+    <string name="dark_theme">Chủ đề tối</string>
+    <string name="tabs">Các tab</string>
+    <string name="theme">Chủ đề ứng dụng</string>
+    <string name="light_theme">Chủ đề ánh sáng</string>
+    <string name="black_theme">Chủ đề màu đen (AMOLED)</string>
+    <string name="folder">Tên thư mục</string>
+    <string name="action_folder">Thư mục</string>
+    <string name="action_rename">Đổi tên</string>
+    <string name="title_rename_folder">Đổi tên thư mục</string>
+    <string name="dialog_folder">Bạn muốn làm gì với thư mục này?</string>
+    <string name="message_web_storage_cleared">Đã xóa bộ nhớ web</string>
+    <string name="tabs_in_drawer">Hiển thị các tab trong Ngăn điều hướng</string>
+    <string name="do_not_track">Yêu cầu "Không theo dõi"</string>
+    <string name="remove_identifying_headers">Xóa tiêu đề nhận dạng</string>
+    <string name="debug_title">Cài đặt gỡ lỗi</string>
+    <string name="debug_leak_canary" translatable="false">LeakCanary</string>
+    <string name="app_restart">Vui lòng khởi động lại ứng dụng để thay đổi có hiệu lực.</string>
+    <string name="app_name">Trình duyệt Internet</string>
+    <string name="lightning_name" translatable="false">Lightning-Browser</string>
+    <string name="url_lightning" translatable="false">https://github.com/anthonycr/Lightning-Browser</string>
+    <string name="action_open_lightning" translatable="false">Based on LightningBrowser by Anthony Restaino</string>
+    <string name="finish_on_pause">Đóng ứng dụng nếu được chuyển sang nền</string>
+    <string name="exit">Lối ra</string>
+    <string name="exit_question">Bạn có chắc chắn muốn đóng tất cả các tab và xóa tất cả dữ liệu riêng tư không?</string>
+    <string name="title_clear_all">Xóa dữ liệu cá nhân</string>
+    <string name="dialog_clear_all">Xóa tất cả dữ liệu riêng tư: cookie, bộ nhớ cache, lưu trữ trên web, v.v.</string>
+    <string name="message_clear_privatedata">Tất cả dữ liệu cá nhân đã bị xóa</string>
+    <string name="enable_cookies">Bật cookie</string>
+    <string name="tpc_always_disabled">Cookie của bên thứ 3 luôn bị tắt</string>
+    <string name="private_data_exit">Xóa dữ liệu cá nhân khi thoát</string>
+    <string name="private_data_exit_summary">cookie, lưu trữ web, cơ sở dữ liệu</string>
+    <string name="allow_screenshots">Cho phép ảnh chụp màn hình và xem trước</string>
+    <string name="screenshots_description">cho phép ảnh chụp màn hình và hiển thị bản xem trước trong chế độ xem ứng dụng gần đây</string>
+    <string name="msg_screenshot_title">Chú ý</string>
+    <string name="msg_screenshot_test">Ứng dụng phải được khởi động lại trước khi thay đổi có hiệu lực</string>
+    <string name="cd_open_drawer">mở ngăn kéo</string>
+    <string name="cd_search_back">tìm kiếm trước</string>
+    <string name="cd_search_next">tìm kiếm tiếp theo</string>
+    <string name="cd_search_quit">bỏ tìm kiếm</string>
+    <string name="cd_tabs_close">đóng tab</string>
+    <string name="cd_tabs_actions">tab hành động</string>
+    <string name="dialog_download_permission_denied_header">Quyền bị từ chối</string>
+    <string name="dialog_download_permission_denied_text">Vui lòng cho phép truy cập Tệp và Phương tiện trong cài đặt hệ thống nếu bạn muốn tải tệp xuống.</string>
+    <string name="action_change_permission">đi đến quyền</string>
+    <string name="open_pdf_with_google_docs">Mở tài liệu bằng tài liệu google</string>
+    <string name="import_bookmarks_title">Nhập dấu trang</string>
+    <string name="import_bookmarks_message">Các dấu trang đã nhập sẽ được thêm vào các dấu trang hiện có của bạn.</string>
+    <string name="share">Đăng lại</string>
+</resources>

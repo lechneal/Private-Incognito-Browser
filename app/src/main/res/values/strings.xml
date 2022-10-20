@@ -16,7 +16,6 @@
 -->
 
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-
     <string name="action_new_tab">New Tab</string>
     <string name="action_new_bg_tab">Open in background</string>
     <string name="action_history">History</string>
@@ -25,13 +24,13 @@
     <string name="action_copy">Copy Link</string>
     <string name="action_forward">Forward</string>
     <string name="settings">Settings</string>
-    <string name="agent">User Agent</string>
+    <string name="agent" translatable="false">User Agent</string>
     <string name="home">Homepage</string>
     <string name="fullscreen">Full-screen Mode</string>
     <string name="java">Enable JavaScript</string>
     <string name="download">Download Location</string>
     <string name="settings_advanced">Advanced Settings</string>
-    <string name="apache">Apache License 2.0</string>
+    <string name="apache" translatable="false">Apache License 2.0</string>
     <string name="version">Application Version</string>
     <string name="cache">Clear cache on exit</string>
     <string name="reflow">Enable text reflow</string>
@@ -60,7 +59,6 @@
     <string name="dialog_download">Do you want to download this file?</string>
     <string name="action_cancel">Cancel</string>
     <string name="title_warning">Warning</string>
-    <string name="title_user_agent">User Agent</string>
     <string name="title_download_location">Download Location</string>
     <string name="title_custom_homepage">Custom Homepage</string>
     <string name="action_webpage">Webpage</string>
@@ -71,13 +69,13 @@
     <string name="title_text_size">Text Size</string>
     <string name="title_error">Error</string>
     <string name="hint_title">Title</string>
-    <string name="hint_url">URL</string>
+    <string name="hint_url" translatable="false">URL</string>
     <string name="title_edit_bookmark">Edit Bookmark</string>
     <string name="action_edit">Edit</string>
     <string name="action_homepage">Default</string>
     <string name="action_back">Back</string>
     <string name="action_find">Find in Page</string>
-    <string name="download_pending">Starting download\u2026</string>
+    <string name="download_pending">Starting download...</string>
     <string name="cannot_download">Can only download \"http\" or \"https\" URLs.</string>
     <string name="problem_download">Invalid URL encountered, cannot download</string>
     <string name="problem_location_download">Cannot download to the specified location</string>
@@ -109,9 +107,9 @@
     <string name="folder_default">Default</string>
     <string name="folder_custom">Custom</string>
     <string name="untitled">Untitled</string>
-    <string name="mpl_license">Mozilla Public License v. 2.0</string>
+    <string name="mpl_license" translatable="false">Mozilla Public License v. 2.0</string>
     <string name="freeware">Freeware</string>
-    <string name="android_open_source_project">Android Open Source Project</string>
+    <string name="android_open_source_project" translatable="false">Android Open Source Project</string>
     <string name="hphosts_ad_server_list">hpHosts Ad Server List</string>
     <string name="deleted_tab">Reopened old tab</string>
     <string name="rendering_mode">Rendering Mode</string>
@@ -134,10 +132,10 @@
     <string name="close_all_tabs">Close all tabs</string>
     <string name="close_other_tabs">Close other tabs</string>
     <string name="color_mode">Enable Color Mode</string>
-    <string name="loading">Loading&#8230;</string>
-    <string name="snacktory">Snacktory</string>
-    <string name="jsoup">jsoup: Java HTML Parser</string>
-    <string name="mit_license">MIT License</string>
+    <string name="loading">Loading...</string>
+    <string name="snacktory" translatable="false">Snacktory</string>
+    <string name="jsoup" translatable="false">jsoup: Java HTML Parser</string>
+    <string name="mit_license" translatable="false">MIT License</string>
     <string name="url_contents">URL Box Contents</string>
     <string name="text_encoding">Text Encoding</string>
     <string-array name="url_content_array">
@@ -157,17 +155,15 @@
     <string name="dialog_folder">What would you like to do with this folder?</string>
     <string name="message_web_storage_cleared">Web Storage Cleared</string>
     <string name="tabs_in_drawer">Show tabs in Navigation Drawer</string>
-    <string name="do_not_track">Request \'Do Not Track\'</string>
+    <string name="do_not_track">Request \"Do Not Track\"</string>
     <string name="remove_identifying_headers">Remove Identifying Headers</string>
-
-    <!-- debug strings -->
     <string name="debug_title">Debug Settings</string>
-    <string name="debug_leak_canary">LeakCanary</string>
+    <string name="debug_leak_canary" translatable="false">LeakCanary</string>
     <string name="app_restart">Please restart the app for the change to take effect.</string>
     <string name="app_name">Internet Browser</string>
-    <string name="lightning_name">Lightning-Browser</string>
-    <string name="url_lightning">https://github.com/anthonycr/Lightning-Browser</string>
-    <string name="action_open_lightning">Based on LightningBrowser by Anthony Restaino</string>
+    <string name="lightning_name" translatable="false">Lightning-Browser</string>
+    <string name="url_lightning" translatable="false">https://github.com/anthonycr/Lightning-Browser</string>
+    <string name="action_open_lightning" translatable="false">Based on LightningBrowser by Anthony Restaino</string>
     <string name="finish_on_pause">Close app if moved to background</string>
     <string name="exit">Exit</string>
     <string name="exit_question">Are you shure you want to close all tabs and delete all private data?</string>
@@ -195,5 +191,4 @@
     <string name="import_bookmarks_title">Importing Bookmarks</string>
     <string name="import_bookmarks_message">The imported bookmarks will be added to your existing bookmarks.</string>
     <string name="share">Share</string>
-
 </resources>
