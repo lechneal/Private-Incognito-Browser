@@ -8,8 +8,8 @@ android {
         applicationId "com.lechneralexander.privatebrowser"
         minSdkVersion 14
         targetSdkVersion 32
-        versionCode 57
-        versionName "2.8.2"
+        versionCode 58
+        versionName "2.8.3"
     }
 
     buildTypes {

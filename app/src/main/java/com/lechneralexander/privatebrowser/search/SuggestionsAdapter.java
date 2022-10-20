@@ -194,6 +194,9 @@ public class SuggestionsAdapter extends BaseAdapter implements Filterable, Sugge
             }
             File dir = new File(app.getCacheDir().toString());
             String[] fileList = dir.list(new NameFilter());
+            if (fileList == null) {
+                return;
+            }
             long earliestTimeAllowed = System.currentTimeMillis() - INTERVAL_DAY;
             for (String fileName : fileList) {
                 File file = new File(dir.getPath() + fileName);

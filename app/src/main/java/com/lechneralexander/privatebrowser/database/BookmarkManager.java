@@ -372,7 +372,7 @@ public class BookmarkManager {
     public synchronized List<HistoryItem> getAllBookmarks(boolean sort) {
         if (mBookmarksMap == null) {
             Log.w(TAG, "mBookmarksMap is null");
-            return null;
+            mBookmarksMap = new HashMap<>();
         }
 
         final List<HistoryItem> bookmarks = new ArrayList<>(mBookmarksMap.values());

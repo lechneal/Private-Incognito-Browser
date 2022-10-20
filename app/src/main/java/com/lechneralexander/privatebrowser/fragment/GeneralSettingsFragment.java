@@ -266,7 +266,7 @@ public class GeneralSettingsFragment extends LightningPreferenceFragment impleme
 
     private void agentDialog() {
         AlertDialog.Builder agentPicker = new AlertDialog.Builder(mActivity);
-        agentPicker.setTitle(getResources().getString(R.string.title_user_agent));
+        agentPicker.setTitle(getResources().getString(R.string.agent));
         mAgentChoice = mPreferenceManager.getUserAgentChoice(ConfigUtils.getDefaultUserAgent(getActivity()));
         agentPicker.setSingleChoiceItems(R.array.user_agent, mAgentChoice - 1,
                 new DialogInterface.OnClickListener() {
@@ -296,7 +296,7 @@ public class GeneralSettingsFragment extends LightningPreferenceFragment impleme
 
     private void agentPicker() {
         final AlertDialog.Builder agentStringPicker = new AlertDialog.Builder(mActivity);
-        agentStringPicker.setTitle(getResources().getString(R.string.title_user_agent));
+        agentStringPicker.setTitle(getResources().getString(R.string.agent));
         final EditText getAgent = new EditText(mActivity);
         agentStringPicker.setView(getAgent);
         agentStringPicker.setPositiveButton(getResources().getString(R.string.action_ok),

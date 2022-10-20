@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import javax.inject.Inject;
 
 import com.lechneralexander.privatebrowser.R;
+import com.lechneralexander.privatebrowser.app.AppComponent;
 import com.lechneralexander.privatebrowser.app.BrowserApp;
 import com.lechneralexander.privatebrowser.preference.PreferenceManager;
 
@@ -21,15 +22,20 @@ public abstract class ThemableBrowserActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        BrowserApp.getAppComponent().inject(this);
-        mTheme = mPreferences.getUseTheme();
-        mShowTabsInDrawer = mPreferences.getShowTabsInDrawer(!isTablet());
+        AppComponent appComponent = BrowserApp.getAppComponent();
+        if (appComponent != null) {
+            BrowserApp.getAppComponent().inject(this);
+        }
+        if (mPreferences != null) {
+            mTheme = mPreferences.getUseTheme();
+            mShowTabsInDrawer = mPreferences.getShowTabsInDrawer(!isTablet());
 
-        // set the theme
-        if (mTheme == 1) {
-            setTheme(R.style.Theme_DarkTheme);
-        } else if (mTheme == 2) {
-            setTheme(R.style.Theme_BlackTheme);
+            // set the theme
+            if (mTheme == 1) {
+                setTheme(R.style.Theme_DarkTheme);
+            } else if (mTheme == 2) {
+                setTheme(R.style.Theme_BlackTheme);
+            }
         }
         super.onCreate(savedInstanceState);
     }
