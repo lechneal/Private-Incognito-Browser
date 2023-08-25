@@ -341,10 +341,6 @@ public class LightningView {
             return;
         }
         final WebSettings settings = mWebView.getSettings();
-        if (API < Build.VERSION_CODES.JELLY_BEAN_MR2) {
-            //noinspection deprecation
-            settings.setAppCacheMaxSize(Long.MAX_VALUE);
-        }
         if (API < Build.VERSION_CODES.JELLY_BEAN_MR1) {
             //noinspection deprecation
             settings.setEnableSmoothTransition(true);
@@ -361,12 +357,10 @@ public class LightningView {
 
         if (!mIsIncognitoTab) {
             settings.setDomStorageEnabled(true);
-            settings.setAppCacheEnabled(true);
             settings.setCacheMode(WebSettings.LOAD_DEFAULT);
             settings.setDatabaseEnabled(true);
         } else {
             settings.setDomStorageEnabled(true);    //Allow dom storgage
-            settings.setAppCacheEnabled(true);      //Allow appcache (deleted on exit)
             settings.setCacheMode(WebSettings.LOAD_DEFAULT); //Allow cache (deleted on exit - if desired)
             settings.setDatabaseEnabled(true);     //Allow databases (deleted on exit)
         }
@@ -380,32 +374,6 @@ public class LightningView {
             settings.setAllowFileAccessFromFileURLs(false);
             settings.setAllowUniversalAccessFromFileURLs(false);
         }
-
-        getPathObservable("appcache")
-                .subscribeOn(Schedulers.io())
-                .observeOn(Schedulers.main())
-                .subscribe(new OnSubscribe<File>() {
-                    @Override
-                    public void onNext(File item) {
-                        settings.setAppCachePath(item.getPath());
-                    }
-
-                    @Override
-                    public void onComplete() {}
-                });
-
-//        getPathObservable("geolocation")
-//                .subscribeOn(Schedulers.io())
-//                .observeOn(Schedulers.main())
-//                .subscribe(new OnSubscribe<File>() {
-//                    @Override
-//                    public void onNext(File item) {
-//                        settings.setGeolocationDatabasePath(item.getPath());
-//                    }
-//
-//                    @Override
-//                    public void onComplete() {}
-//                });
 
         getPathObservable("databases")
                 .subscribeOn(Schedulers.io())
