@@ -1,14 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdk 34
+    compileSdk = 37
 
     defaultConfig {
         applicationId "com.lechneralexander.privatebrowser"
         minSdkVersion 14
-        targetSdkVersion 34
-        versionCode 65
-        versionName "2.9.1"
+        targetSdkVersion 37
+        versionCode 68
+        versionName "2.9.4"
+    }
+    buildFeatures {
+        buildConfig = true
     }
 
     buildTypes {
@@ -22,12 +25,12 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles 'proguard-project.txt'
+            optimization {
+                enable = true
+            }
         }
     }
 
-    lintOptions {
-        abortOnError true
-    }
     packagingOptions {
         resources {
             excludes += ['.readme']
@@ -35,6 +38,9 @@ android {
     }
 
     namespace 'com.lechneralexander.privatebrowser'
+    lint {
+        abortOnError true
+    }
 }
 
 
